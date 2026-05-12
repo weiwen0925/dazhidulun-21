@@ -317,7 +317,60 @@ body{font-size:20px!important;}
         'color:#fff!important;width:100%!important;height:100%!important;'+
         'overflow:hidden!important;}'+
         '*{visibility:hidden!important;display:none!important;}'+
-        '</style></head><body></body>';
+        '</style><style id="wy-print-guard-css">
+/* === L3 永久 print 守門員 v2（不會被 reveal 移除）=== */
+@media print {
+  /* 大殺：所有元素 display:none */
+  html, body > *, main > *, section, .chapter, .ch-head, .ch-body,
+  .site-hero, .preface, .toc-section, .bridge, .site-footer,
+  .read-progress, .toc-card, iframe, .ch-frame,
+  #sb, aside, header, footer, nav,
+  [data-wy-notice-hero], [data-wy-notice],
+  button, #backTop, #sbToggle {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    color: #ffffff !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  /* 抹除所有 ::before / ::after 偽元素 */
+  *::before, *::after {
+    content: '' !important;
+    display: none !important;
+    background: #ffffff !important;
+    color: #ffffff !important;
+    border: 0 !important;
+  }
+  /* html / body 收縮到 1 張紙 */
+  html, body {
+    background: #ffffff !important;
+    color: #ffffff !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    visibility: hidden !important;
+  }
+  /* @page 純白單頁 */
+  @page {
+    margin: 0 !important;
+    size: A4 !important;
+    background: #ffffff !important;
+  }
+  @page :first { margin: 0 !important; }
+  @page :left  { margin: 0 !important; }
+  @page :right { margin: 0 !important; }
+}
+</style>
+</head><body></body>';
       document.documentElement.innerHTML = blankHTML;
       try{ document.title = ''; }catch(e){}
       // 標誌失敗，後續解碼器都不要動作
@@ -368,10 +421,27 @@ body{font-size:20px!important;}
   /* L3 額外保險：列印事件觸發時亦清空 */
   function _onBeforePrint(){
     try{
+      // 把整頁所有可見性收掉，連同 iframe
+      var s = document.getElementById('wy-print-hide-now');
+      if(!s){
+        s = document.createElement('style');
+        s.id = 'wy-print-hide-now';
+        s.textContent = 'html,body,body *{visibility:hidden!important;background:#fff!important;color:#fff!important}'+
+                        'iframe{display:none!important}'+
+                        '*::before,*::after{content:""!important;display:none!important}';
+        document.head.appendChild(s);
+      }
       document.documentElement.style.background = '#fff';
       document.body && (document.body.style.background = '#fff');
     }catch(e){}
   }
+  function _onAfterPrint(){
+    try{
+      var s = document.getElementById('wy-print-hide-now');
+      if(s && s.parentNode) s.parentNode.removeChild(s);
+    }catch(e){}
+  }
+  window.addEventListener('afterprint', _onAfterPrint, true);
   window.addEventListener('beforeprint', _onBeforePrint, true);
   try{
     var mq = window.matchMedia('print');
