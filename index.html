@@ -455,24 +455,44 @@ body{font-size:20px!important;}
       resolve(true);
       return;
     }
+    /* L6 寬鬆版：以 navigator.onLine 為主判 + fetch 為輔助 */
+    /* 1) navigator.onLine === false（webarchive 離線開啟）→ 直接鎖定 */
+    if(navigator.onLine === false){ reject(new Error('offline-by-navigator')); return; }
+    /* 2) fetch 為輔；成功固然通過，失敗也僅 fallback 到 navigator.onLine */
     var ts = Date.now() + '.' + Math.random().toString(36).slice(2);
     var ctl = null;
     try{ ctl = (typeof AbortController !== 'undefined') ? new AbortController() : null; }catch(e){}
+    var settled = false;
     var to = setTimeout(function(){
+      if(settled) return;
+      settled = true;
       if(ctl){ try{ ctl.abort(); }catch(e){} }
-      reject(new Error('timeout'));
-    }, 6000);
+      /* timeout：fallback 看 navigator.onLine */
+      if(navigator.onLine === false) reject(new Error('timeout-offline'));
+      else resolve(true);
+    }, 8000);
     try{
       fetch(PING_URL + '?_wyping=' + ts, {
-        method: 'HEAD',
+        method: 'GET',
         cache: 'no-store',
-        mode: 'no-cors',
         credentials: 'omit',
-        redirect: 'manual',
+        redirect: 'follow',
         signal: ctl ? ctl.signal : undefined
-      }).then(function(){ clearTimeout(to); resolve(true); })
-        .catch(function(err){ clearTimeout(to); reject(err); });
-    }catch(err){ clearTimeout(to); reject(err); }
+      }).then(function(r){
+        if(settled) return; settled = true; clearTimeout(to);
+        /* 任何 response（含 redirect/4xx）皆視為線上 */
+        resolve(true);
+      }).catch(function(err){
+        if(settled) return; settled = true; clearTimeout(to);
+        /* fetch 失敗時 fallback 到 navigator.onLine */
+        if(navigator.onLine === false) reject(err);
+        else resolve(true);
+      });
+    }catch(err){
+      if(settled) return; settled = true; clearTimeout(to);
+      if(navigator.onLine === false) reject(err);
+      else resolve(true);
+    }
   });
 
   window.__wyReady.then(function(){
