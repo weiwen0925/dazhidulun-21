@@ -1323,13 +1323,28 @@ var c=0,iv=setInterval(function(){build();if(++c>20)clearInterval(iv);},250);
 var box=document.getElementById('c21mapBox'),btn=document.getElementById('c21mapBtn'),
     md=document.getElementById('c21mapModal'),cl=document.getElementById('c21mapClose');
 if(!box||!btn||!md)return;
+function relayout(){ /* 動態疊放：排到右下所有可見浮鈕（各品總表鈕/影音鈕/回頂鈕）最上方 */
+  var cands=document.querySelectorAll('div[class*="-fabbox"],#wyFloatYt,#wyChapterVideo,#floatYt,.float-yt');
+  var minTop=Infinity,i,el,r,cs;
+  for(i=0;i<cands.length;i++){el=cands[i];
+    if(el===box||box.contains(el)||el.contains(box))continue;
+    cs=window.getComputedStyle(el);
+    if(cs.display==='none'||cs.visibility==='hidden')continue;
+    r=el.getBoundingClientRect();
+    if(!r.height||r.right<window.innerWidth-200)continue; /* 只看右側浮鈕 */
+    if(r.top<minTop)minTop=r.top;
+  }
+  box.style.bottom=(minTop<Infinity)?(window.innerHeight-minTop+12)+'px':'';
+}
 function onScroll(){
   var c1=document.getElementById('chapter-1');
-  if(!c1){box.classList.add('show');return;}
-  var top=c1.getBoundingClientRect().top;
-  box.classList.toggle('show',top<window.innerHeight*0.6);
+  if(!c1){box.classList.add('show');}
+  else{box.classList.toggle('show',c1.getBoundingClientRect().top<window.innerHeight*0.6);}
+  relayout();
 }
 window.addEventListener('scroll',onScroll,{passive:true});
+window.addEventListener('resize',relayout);
+setInterval(relayout,900); /* 各品鈕隨捲動切換顯示，定期重排 */
 setTimeout(onScroll,600);setTimeout(onScroll,2000);
 function open(){md.classList.add('open');document.documentElement.style.overflow='hidden';}
 function close(){md.classList.remove('open');document.documentElement.style.overflow='';}
