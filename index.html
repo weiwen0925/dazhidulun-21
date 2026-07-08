@@ -1162,5 +1162,183 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 var c=0,iv=setInterval(function(){build();if(++c>20)clearInterval(iv);},250);
 })();</script>
 <!--WY-C21TOC:END-->
+<!--WY-C21MAP:BEGIN-->
+<style id="wy-c21map-css">
+.c21map-fabbox{position:fixed;right:22px;bottom:138px;z-index:121;display:none;}
+.c21map-fabbox.show{display:block;}
+.c21map-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#3f4f42,#242e26);padding:8px 15px;border-radius:22px;border:1px solid rgba(120,170,130,.55);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c21map-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(120,170,130,.5);}
+.c21map-ic{font-size:15px;line-height:1;color:#9fd0b0;}
+.c21map-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c21map-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c21map-l2{font-size:13px;font-weight:700;color:#eaf5ec;white-space:nowrap;}
+.c21map-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c21map-modal.open{display:flex;}
+.c21map-card{position:relative;background:#fbf7ee;max-width:1020px;width:100%;max-height:90vh;overflow:auto;border:1px solid #b8862f;border-radius:14px;padding:22px 22px 14px;box-shadow:0 18px 60px rgba(0,0,0,.5);}
+.c21map-card svg{width:100%;height:auto;display:block;}
+.c21map-close{position:sticky;top:0;float:right;width:32px;height:32px;border:1px solid rgba(139,94,60,.45);border-radius:50%;background:#fbf7ee;color:#8b5e3c;font-size:16px;cursor:pointer;line-height:1;z-index:2;}
+.c21map-close:hover{color:#5a3e22;border-color:#8b5e3c;}
+.c21map-cap{font-family:"Noto Sans TC",sans-serif;font-size:12.5px;color:#8a7a62;line-height:1.9;padding:10px 4px 4px;border-top:1px dashed rgba(139,94,60,.3);margin-top:10px;}
+@media(max-width:700px){.c21map-fabbox{right:14px;bottom:132px;}.c21map-card{padding:14px 10px 10px;}}
+@media (prefers-reduced-motion: no-preference){.c21map-modal.open .c21map-card{animation:c21mapIn .22s ease;}@keyframes c21mapIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}}
+</style>
+<div class="c21map-fabbox" id="c21mapBox"><button class="c21map-btn" id="c21mapBtn" type="button" aria-label="開啟禪定體系對攝圖"><span class="c21map-ic">⊞</span><span class="c21map-ls"><span class="c21map-l1">全卷 · 品一至品八</span><span class="c21map-l2">禪定對攝圖</span></span></button></div>
+<div class="c21map-modal" id="c21mapModal" role="dialog" aria-modal="true" aria-label="禪定體系對攝圖"><div class="c21map-card"><button class="c21map-close" id="c21mapClose" aria-label="關閉">✕</button>
+<svg viewBox="0 0 940 720" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Serif TC','Source Han Serif TC',serif" role="img" aria-label="卷二十一 禪定體系對攝圖：八背捨、八勝處、十一切處、九次第定">
+  <defs>
+    <marker id="arrG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#c8a05a"/></marker>
+  </defs>
+  <rect x="0" y="0" width="940" height="720" fill="#fbf7ee"/>
+
+  <!-- 標題 -->
+  <text x="470" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#5a3e22" letter-spacing="2">禪定體系對攝圖 ── 八背捨・八勝處・十一切處・九次第定</text>
+  <text x="470" y="62" text-anchor="middle" font-size="13" fill="#8b5e3c" letter-spacing="1">「三事一義，轉變有三名」（品一）・「初二背捨、初四勝處，初禪二禪中攝；淨背捨、後四勝處、八一切處，第四禪中攝」（品二）</text>
+
+  <!-- 頂部三階流程 -->
+  <rect x="240" y="86" width="182" height="34" rx="17" fill="#fdf3ee" stroke="#b0603a" stroke-width="1.6"/>
+  <text x="331" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#7a3a1c">八背捨・捨離不著</text>
+  <rect x="471" y="86" width="182" height="34" rx="17" fill="#faf4e4" stroke="#b8862f" stroke-width="1.6"/>
+  <text x="562" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#6b4a12">八勝處・勝知勝見</text>
+  <rect x="703" y="86" width="182" height="34" rx="17" fill="#eef4ef" stroke="#4a7a5a" stroke-width="1.6"/>
+  <text x="794" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#2f5a3c">十一切處・遍滿十方</text>
+  <line x1="424" y1="103" x2="467" y2="103" stroke="#c8a05a" stroke-width="1.6" marker-end="url(#arrG)"/>
+  <text x="445" y="96" text-anchor="middle" font-size="10.5" fill="#9a6a1c">轉勝</text>
+  <line x1="655" y1="103" x2="699" y2="103" stroke="#c8a05a" stroke-width="1.6" marker-end="url(#arrG)"/>
+  <text x="677" y="96" text-anchor="middle" font-size="10.5" fill="#9a6a1c">轉廣</text>
+  <rect x="36" y="86" width="150" height="34" rx="17" fill="#f0e8d8" stroke="#b8862f" stroke-width="1.4"/>
+  <text x="111" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#5a3e22">九次第定・階位軸</text>
+
+  <!-- 欄底色 -->
+  <rect x="222" y="140" width="218" height="524" rx="10" fill="#b0603a" opacity="0.045"/>
+  <rect x="464" y="140" width="196" height="524" rx="10" fill="#b8862f" opacity="0.05"/>
+  <rect x="684" y="140" width="220" height="524" rx="10" fill="#4a7a5a" opacity="0.05"/>
+
+  <!-- ── 階位脊柱（九次第定）── rowTop(i)=152+i*56 -->
+  <!-- r0 初禪 -->
+  <rect x="36" y="157" width="150" height="46" rx="9" fill="#f0e8d8" stroke="#b8862f" stroke-width="1.4"/>
+  <text x="103" y="186" text-anchor="middle" font-size="14.5" font-weight="700" fill="#5a3e22">初禪</text>
+  <circle cx="166" cy="180" r="10" fill="#b8862f"/><text x="166" y="184.5" text-anchor="middle" font-size="11" fill="#fff7e6">①</text>
+  <!-- r1 二禪 -->
+  <rect x="36" y="213" width="150" height="46" rx="9" fill="#f0e8d8" stroke="#b8862f" stroke-width="1.4"/>
+  <text x="103" y="242" text-anchor="middle" font-size="14.5" font-weight="700" fill="#5a3e22">二禪</text>
+  <circle cx="166" cy="236" r="10" fill="#b8862f"/><text x="166" y="240.5" text-anchor="middle" font-size="11" fill="#fff7e6">②</text>
+  <!-- r2 三禪 -->
+  <rect x="36" y="269" width="150" height="46" rx="9" fill="#f4efe4" stroke="#b8a97e" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="103" y="298" text-anchor="middle" font-size="14.5" font-weight="700" fill="#8a7a5e">三禪</text>
+  <circle cx="166" cy="292" r="10" fill="#b8a97e"/><text x="166" y="296.5" text-anchor="middle" font-size="11" fill="#fff7e6">③</text>
+  <!-- r3 四禪 -->
+  <rect x="36" y="325" width="150" height="46" rx="9" fill="#f0e8d8" stroke="#b8862f" stroke-width="1.4"/>
+  <text x="103" y="354" text-anchor="middle" font-size="14.5" font-weight="700" fill="#5a3e22">四禪</text>
+  <circle cx="166" cy="348" r="10" fill="#b8862f"/><text x="166" y="352.5" text-anchor="middle" font-size="11" fill="#fff7e6">④</text>
+  <!-- r4 空無邊處 -->
+  <rect x="36" y="381" width="150" height="46" rx="9" fill="#eef1ee" stroke="#6b8a76" stroke-width="1.3"/>
+  <text x="103" y="410" text-anchor="middle" font-size="13.5" font-weight="700" fill="#3c5a46">空無邊處定</text>
+  <circle cx="166" cy="404" r="10" fill="#6b8a76"/><text x="166" y="408.5" text-anchor="middle" font-size="11" fill="#fff7e6">⑤</text>
+  <!-- r5 識無邊處 -->
+  <rect x="36" y="437" width="150" height="46" rx="9" fill="#eef1ee" stroke="#6b8a76" stroke-width="1.3"/>
+  <text x="103" y="466" text-anchor="middle" font-size="13.5" font-weight="700" fill="#3c5a46">識無邊處定</text>
+  <circle cx="166" cy="460" r="10" fill="#6b8a76"/><text x="166" y="464.5" text-anchor="middle" font-size="11" fill="#fff7e6">⑥</text>
+  <!-- r6 無所有處 -->
+  <rect x="36" y="493" width="150" height="46" rx="9" fill="#eef1ee" stroke="#6b8a76" stroke-width="1.3"/>
+  <text x="103" y="522" text-anchor="middle" font-size="13.5" font-weight="700" fill="#3c5a46">無所有處定</text>
+  <circle cx="166" cy="516" r="10" fill="#6b8a76"/><text x="166" y="520.5" text-anchor="middle" font-size="11" fill="#fff7e6">⑦</text>
+  <!-- r7 非想非非想 -->
+  <rect x="36" y="549" width="150" height="46" rx="9" fill="#eef1ee" stroke="#6b8a76" stroke-width="1.3"/>
+  <text x="103" y="571" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3c5a46">非想非非想</text>
+  <text x="103" y="588" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3c5a46">處定</text>
+  <circle cx="166" cy="572" r="10" fill="#6b8a76"/><text x="166" y="576.5" text-anchor="middle" font-size="11" fill="#fff7e6">⑧</text>
+  <!-- r8 滅受想 -->
+  <rect x="36" y="605" width="150" height="46" rx="9" fill="#efe6e0" stroke="#8b2500" stroke-width="1.5"/>
+  <text x="103" y="634" text-anchor="middle" font-size="14" font-weight="700" fill="#8b2500">滅受想定</text>
+  <circle cx="166" cy="628" r="10" fill="#8b2500"/><text x="166" y="632.5" text-anchor="middle" font-size="11" fill="#fff7e6">⑨</text>
+  <!-- 脊柱箭頭 -->
+  <line x1="103" y1="203" x2="103" y2="211" stroke="#c8a05a" stroke-width="1.6" marker-end="url(#arrG)"/>
+  <line x1="103" y1="259" x2="103" y2="267" stroke="#c8a05a" stroke-width="1.6" marker-end="url(#arrG)"/>
+  <line x1="103" y1="315" x2="103" y2="323" stroke="#c8a05a" stroke-width="1.6" marker-end="url(#arrG)"/>
+  <line x1="103" y1="371" x2="103" y2="379" stroke="#c8a05a" stroke-width="1.6" marker-end="url(#arrG)"/>
+  <line x1="103" y1="427" x2="103" y2="435" stroke="#c8a05a" stroke-width="1.6" marker-end="url(#arrG)"/>
+  <line x1="103" y1="483" x2="103" y2="491" stroke="#c8a05a" stroke-width="1.6" marker-end="url(#arrG)"/>
+  <line x1="103" y1="539" x2="103" y2="547" stroke="#c8a05a" stroke-width="1.6" marker-end="url(#arrG)"/>
+  <line x1="103" y1="595" x2="103" y2="603" stroke="#c8a05a" stroke-width="1.6" marker-end="url(#arrG)"/>
+
+  <!-- ── 八背捨欄 ── -->
+  <!-- 初二背捨：跨初禪二禪 -->
+  <rect x="232" y="157" width="198" height="102" rx="9" fill="#fdf3ee" stroke="#b0603a" stroke-width="1.6"/>
+  <text x="331" y="175" text-anchor="middle" font-size="10.5" fill="#b0603a" letter-spacing="1">初二背捨・初禪二禪中攝</text>
+  <text x="331" y="199" text-anchor="middle" font-size="13" font-weight="700" fill="#7a3a1c">① 內有色想・觀外色背捨</text>
+  <text x="331" y="240" text-anchor="middle" font-size="13" font-weight="700" fill="#7a3a1c">② 內無色想・觀外色背捨</text>
+  <!-- 四禪：淨背捨 -->
+  <rect x="232" y="330" width="198" height="38" rx="9" fill="#fdf3ee" stroke="#b0603a" stroke-width="1.6"/>
+  <text x="331" y="354" text-anchor="middle" font-size="13" font-weight="700" fill="#7a3a1c">③ 淨背捨・身作證</text>
+  <!-- 四無色背捨 -->
+  <rect x="232" y="386" width="198" height="36" rx="9" fill="#fdf3ee" stroke="#b0603a" stroke-width="1.4"/>
+  <text x="331" y="409" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7a3a1c">④ 虛空處背捨</text>
+  <rect x="232" y="442" width="198" height="36" rx="9" fill="#fdf3ee" stroke="#b0603a" stroke-width="1.4"/>
+  <text x="331" y="465" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7a3a1c">⑤ 識處背捨</text>
+  <rect x="232" y="498" width="198" height="36" rx="9" fill="#fdf3ee" stroke="#b0603a" stroke-width="1.4"/>
+  <text x="331" y="521" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7a3a1c">⑥ 無所有處背捨</text>
+  <rect x="232" y="554" width="198" height="36" rx="9" fill="#fdf3ee" stroke="#b0603a" stroke-width="1.4"/>
+  <text x="331" y="577" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7a3a1c">⑦ 非有想非無想處背捨</text>
+  <rect x="232" y="610" width="198" height="36" rx="9" fill="#fdf3ee" stroke="#8b2500" stroke-width="1.7"/>
+  <text x="331" y="633" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8b2500">⑧ 滅受想背捨</text>
+
+  <!-- ── 八勝處欄 ── -->
+  <rect x="472" y="157" width="180" height="102" rx="9" fill="#faf4e4" stroke="#b8862f" stroke-width="1.6"/>
+  <text x="562" y="175" text-anchor="middle" font-size="10.5" fill="#9a6a1c" letter-spacing="1">前四勝處・初禪二禪中攝</text>
+  <text x="562" y="199" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6b4a12">①② 內有色想・觀外色少／多</text>
+  <text x="562" y="240" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6b4a12">③④ 內無色想・觀外色少／多</text>
+  <rect x="472" y="325" width="180" height="48" rx="9" fill="#faf4e4" stroke="#b8862f" stroke-width="1.6"/>
+  <text x="562" y="344" text-anchor="middle" font-size="10.5" fill="#9a6a1c" letter-spacing="1">後四勝處・第四禪中攝</text>
+  <text x="562" y="363" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6b4a12">⑤—⑧ 觀青黃赤白・一一勝知勝見</text>
+
+  <!-- ── 十一切處欄 ── -->
+  <rect x="694" y="320" width="200" height="58" rx="9" fill="#eef4ef" stroke="#4a7a5a" stroke-width="1.6"/>
+  <text x="794" y="338" text-anchor="middle" font-size="10.5" fill="#3c6a4c" letter-spacing="1">前八一切處・第四禪中攝</text>
+  <text x="794" y="356" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2f5a3c">①—④ 地・水・火・風一切處</text>
+  <text x="794" y="372" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2f5a3c">⑤—⑧ 青・黃・赤・白一切處</text>
+  <rect x="694" y="386" width="200" height="36" rx="9" fill="#eef4ef" stroke="#4a7a5a" stroke-width="1.4"/>
+  <text x="794" y="409" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2f5a3c">⑨ 空一切處・空處攝</text>
+  <rect x="694" y="442" width="200" height="36" rx="9" fill="#eef4ef" stroke="#4a7a5a" stroke-width="1.4"/>
+  <text x="794" y="465" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2f5a3c">⑩ 識一切處・識處攝</text>
+
+  <!-- 三禪列：無攝註記 -->
+  <rect x="232" y="274" width="662" height="36" rx="9" fill="none" stroke="#b0a68e" stroke-width="1.2" stroke-dasharray="6 5"/>
+  <text x="563" y="297" text-anchor="middle" font-size="12" fill="#8a7a5e">三禪樂多、不便觀行 ── 背捨・勝處・一切處此地無攝（九次第定仍具③）</text>
+
+  <!-- 底部圖例 -->
+  <rect x="36" y="676" width="13" height="13" rx="3" fill="#fdf3ee" stroke="#b0603a"/>
+  <text x="56" y="687" font-size="11.5" fill="#7a3a1c">八背捨（捨離不著）</text>
+  <rect x="186" y="676" width="13" height="13" rx="3" fill="#faf4e4" stroke="#b8862f"/>
+  <text x="206" y="687" font-size="11.5" fill="#6b4a12">八勝處（制境勝知）</text>
+  <rect x="336" y="676" width="13" height="13" rx="3" fill="#eef4ef" stroke="#4a7a5a"/>
+  <text x="356" y="687" font-size="11.5" fill="#2f5a3c">十一切處（遍滿十方）</text>
+  <rect x="500" y="676" width="13" height="13" rx="3" fill="#f0e8d8" stroke="#b8862f"/>
+  <text x="520" y="687" font-size="11.5" fill="#5a3e22">九次第定＝①—⑨ 心心相次・能入能住能出</text>
+  <text x="904" y="708" text-anchor="end" font-size="10.5" fill="#a08a6a">依卷二十一・品一「三事一義」與品二「階位攝」原文重繪（講義 M021・p599）</text>
+</svg>
+<div class="c21map-cap">依本卷品一「三事一義，轉變有三名」與品二「初二背捨、初四勝處，初禪二禪中攝；淨背捨、後四勝處、八一切處，第四禪中攝」原文重繪（講義 M021・p599）。八背捨（捨離不著）→ 八勝處（制境勝知）→ 十一切處（遍滿十方）為同一觀法之三階；左軸九次第定為所依階位。與各品右下「全景總表」鈕並用。</div>
+</div></div>
+<script id="wy-c21map-js">
+(function(){
+var box=document.getElementById('c21mapBox'),btn=document.getElementById('c21mapBtn'),
+    md=document.getElementById('c21mapModal'),cl=document.getElementById('c21mapClose');
+if(!box||!btn||!md)return;
+function onScroll(){
+  var c1=document.getElementById('chapter-1');
+  if(!c1){box.classList.add('show');return;}
+  var top=c1.getBoundingClientRect().top;
+  box.classList.toggle('show',top<window.innerHeight*0.6);
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+setTimeout(onScroll,600);setTimeout(onScroll,2000);
+function open(){md.classList.add('open');document.documentElement.style.overflow='hidden';}
+function close(){md.classList.remove('open');document.documentElement.style.overflow='';}
+btn.addEventListener('click',open);
+cl.addEventListener('click',close);
+md.addEventListener('click',function(e){if(e.target===md)close();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&md.classList.contains('open'))close();});
+})();
+</script>
+<!--WY-C21MAP:END-->
 </body>
 </html>
