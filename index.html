@@ -1303,7 +1303,7 @@ var c=0,iv=setInterval(function(){build();if(++c>20)clearInterval(iv);},250);
   <text x="562" y="240" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6b4a12">③④ 內無色想・觀外色少／多</text>
   <rect x="472" y="325" width="180" height="48" rx="9" fill="#faf4e4" stroke="#b8862f" stroke-width="1.6"/>
   <text x="562" y="344" text-anchor="middle" font-size="10.5" fill="#9a6a1c" letter-spacing="1">後四勝處・第四禪中攝</text>
-  <text x="562" y="363" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6b4a12">⑤—⑧ 觀青黃赤白・一一勝知勝見</text>
+  <text x="562" y="363" text-anchor="middle" font-size="11.5" font-weight="700" fill="#6b4a12">⑤—⑧ 觀青黃赤白・一一勝知勝見</text>
 
   <!-- ── 十一切處欄 ── -->
   <rect x="694" y="320" width="200" height="58" rx="9" fill="#eef4ef" stroke="#4a7a5a" stroke-width="1.6"/>
@@ -1338,7 +1338,7 @@ var box=document.getElementById('c21mapBox'),btn=document.getElementById('c21map
     md=document.getElementById('c21mapModal'),cl=document.getElementById('c21mapClose');
 if(!box||!btn||!md)return;
 function relayout(){ /* 動態疊放：排到右下所有可見浮鈕（各品總表鈕/影音鈕/回頂鈕）最上方 */
-  var cands=document.querySelectorAll('div[class*="-fabbox"],#wyFloatYt,#wyChapterVideo,#floatYt,.float-yt');
+  var cands=document.querySelectorAll('div[class*="-fabbox"],.wy-ebox,#wyVideoBtn,#wyFloatYt,#wyChapterVideo,#floatYt,.float-yt');
   var minTop=Infinity,i,el,r,cs;
   for(i=0;i<cands.length;i++){el=cands[i];
     if(el===box||box.contains(el)||el.contains(box))continue;
