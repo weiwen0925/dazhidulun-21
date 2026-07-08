@@ -854,5 +854,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-C21P3:END-->
+<!--WY-C21P4:BEGIN-->
+<style id="wy-c21p4-css">
+.c21p4-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c21p4-fabbox.show{display:block;}
+.c21p4-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c21p4-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c21p4-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c21p4-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c21p4-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c21p4-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c21p4-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c21p4-modal.open{display:flex;}
+.c21p4-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c21p4-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c21p4-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c21p4-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c21p4-close:hover{background:#e3d5b8;}
+.c21p4-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c21p4-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c21p4-tbl th,.c21p4-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c21p4-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c21p4-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c21p4-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c21p4-tbl b{color:#8b2500;}
+.c21p4-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c21p4-note b{color:#8b2500;}
+@media(max-width:900px){.c21p4-fabbox{right:14px;}.c21p4-tbl{font-size:11.5px;}.c21p4-card{padding:26px 14px 16px;}}
+</style>
+<div class="c21p4-fabbox" id="c21p4Box"><button class="c21p4-btn" id="c21p4Btn" type="button" aria-label="開啟全景總表"><span class="c21p4-ic">▦</span><span class="c21p4-ls"><span class="c21p4-l1">本品 · 九相與十想 · 從縛賊到斬殺</span><span class="c21p4-l2">同滅三毒·分屬因果 · 三階段修證進路</span></span></button></div><div class="c21p4-modal" id="c21p4Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c21p4-card"><button class="c21p4-close" id="c21p4Close" type="button" aria-label="關閉">×</button><h3>卷二十一·第四品 九相與十想 · 全景總表</h3><p class="sub">卷二十一・第四品｜縛賊斬殺・七種染著矩陣・八重復次・二甘露門・畢竟空常樂</p><table class="c21p4-tbl"><caption>一、縛賊vs斬殺·同一目標不同層次（本品主骨架）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>核心比喻</td><td>降伏煩惱畫成兩個動作——先<b>縛賊</b>（九相觀綑綁壓制、暫令動彈不得）、再<b>斬殺</b>（十想揮刀斬決、從根斷除）</td></tr><tr><td>九相定位</td><td>「<b>九相如縛賊·為初學·外門·因</b>」——遮未得禪定（為婬欲所覆故），壓制煩惱暫令不起；治標</td></tr><tr><td>十想定位</td><td>「<b>十想如斬殺·為成就·內門·果</b>」——能除滅婬欲等三毒，拔除根本從本斷盡；治本。故必先縛而後殺</td></tr><tr><td>三毒連鎖</td><td>標靶鎖定婬欲——「不淨中淨」顛倒故癡心貪身、貪身故起瞋；三毒連鎖（癡→貪→瞋），<b>貪為樞紐</b>，故不淨觀直取此標靶</td></tr><tr><td>修證地圖</td><td>九相（取相·外門）→ 十想（內門·智慧）→ 四念處（開啟覺知）→ 涅槃（安隱寂滅）；九相十想即《阿含》「二甘露門」中的「不淨門」一支</td></tr></tbody></table><table class="c21p4-tbl"><caption>二、九相除七種染著·對治矩陣（實修細目）</caption><thead><tr><th>染著</th><th>對治之相</th></tr></thead><tbody><tr><td>染著色</td><td>若赤白黃黑等膚色——<b>血塗相·青瘀相·膿爛相</b>多除色愛（見膿血青黑，色澤之美盡破）</td></tr><tr><td>染著形容</td><td>細膚纖指、修目高眉——<b>膖脹相·壞相·噉相·散相</b>多除形容愛（見臌脹裂壞噉殘離散，形貌盡毀）</td></tr><tr><td>染著威儀</td><td>進止坐起、揚眉頓睫、親近按摩——<b>死相</b>多除威儀、語言愛（一死則威儀言語俱寂）</td></tr><tr><td>染著言語</td><td>軟聲美辭、隨時應意、能動人心——<b>死相</b>兼除（氣滅身冷、無所覺識，軟聲美辭何在）</td></tr><tr><td>染著細滑</td><td>柔膚軟肌、熱時身涼寒時體溫——<b>骨相·燒相</b>多除細滑愛（血肉銷盡唯餘白骨灰燼，何滑之有）</td></tr><tr><td>染著人相</td><td>若男若女、雖得六欲不得所著之人猶無所解——<b>噉相·散相·骨相</b>偏除人愛（噉殘離散白骨中，不見有人可著）</td></tr></tbody></table><table class="c21p4-tbl"><caption>三、八重復次與中觀昇華（原典骨幹·合題）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>含攝關係</td><td>十想中的「不淨想」（乃至食不淨想、世間不可樂想）含攝九相——九相是十想不淨門的具體展開</td></tr><tr><td>因果關係</td><td>「九相為因、十想為果，是故先九相後十想」——同為離欲、俱為涅槃，由九相一一導出無常、苦、無我、死、斷、離、盡諸想</td></tr><tr><td>內外·二甘露門</td><td>「九相為外門、十想為內門」——「二為甘露門：一者不淨門、二者安那般那門」，二者同為趨向涅槃的甘露門</td></tr><tr><td>九相三屬性</td><td><b>體性</b>取相性（取著心中影像）·<b>所緣</b>欲界身·<b>歸攝</b>色相陰／身念處少分；依定力繫欲界或色界（膖脹等八相攝欲界初二禪、淨骨相通四禪）</td></tr><tr><td>開門次第</td><td>「身念處→四念處→三十七道品→涅槃城」——九相是這一連串門戶的第一道鑰匙；三毒薄則九十八使山皆動，以<b>金剛三昧</b>摧碎結山。畢竟空中乃有真常樂</td></tr></tbody></table><p class="c21p4-note">九相與十想同滅貪瞋癡三毒，卻分屬「因與果、外門與內門」兩階——九相如縛賊（壓制）、十想如斬殺（拔除），先縛而後殺。從物理的不淨觀（九相）推進到無常苦無我的哲學洞見（十想），再以中觀「緣起無自性、二諦融通、煩惱本空」將前二階的對治法升華為<b>畢竟空寂</b>的究竟解脫。九相雖是不淨觀，依是能成大事——「譬如大海中臭屍，溺人依以得渡」，借假修真、登岸棄筏。</p></div></div>
+<script id="wy-c21p4-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c21p4Btn"),BOX=document.getElementById("c21p4Box"),MODAL=document.getElementById("c21p4Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=3;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#vidFab,.vid-fab,#videoFab,#wyVideoBtn,#wyFab,#wy-fab,#vid-floating,#floatingYt,.video-fab,.wy-vbtn,.wy-video-fab,.floating-yt",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c21p4Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C21P4:END-->
 </body>
 </html>
