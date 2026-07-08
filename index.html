@@ -907,5 +907,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-C21P4:END-->
+<!--WY-C21P5:BEGIN-->
+<style id="wy-c21p5-css">
+.c21p5-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c21p5-fabbox.show{display:block;}
+.c21p5-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c21p5-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c21p5-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c21p5-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c21p5-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c21p5-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c21p5-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c21p5-modal.open{display:flex;}
+.c21p5-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c21p5-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c21p5-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c21p5-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c21p5-close:hover{background:#e3d5b8;}
+.c21p5-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c21p5-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c21p5-tbl th,.c21p5-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c21p5-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c21p5-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c21p5-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c21p5-tbl b{color:#8b2500;}
+.c21p5-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c21p5-note b{color:#8b2500;}
+@media(max-width:900px){.c21p5-fabbox{right:14px;}.c21p5-tbl{font-size:11.5px;}.c21p5-card{padding:26px 14px 16px;}}
+</style>
+<div class="c21p5-fabbox" id="c21p5Box"><button class="c21p5-btn" id="c21p5Btn" type="button" aria-label="開啟全景總表"><span class="c21p5-ic">▦</span><span class="c21p5-ls"><span class="c21p5-l1">本品 · 菩薩九相觀法義</span><span class="c21p5-l2">三重防護網 · 中觀煞車 · 如幻佛事</span></span></button></div><div class="c21p5-modal" id="c21p5Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c21p5-card"><button class="c21p5-close" id="c21p5Close" type="button" aria-label="關閉">×</button><h3>卷二十一·第五品 菩薩九相觀法義 · 全景總表</h3><p class="sub">卷二十一・第五品｜核心悖論・三重防護網・中觀三解密・味過出・三種視角・黃金三角</p><table class="c21p5-tbl"><caption>一、核心衝突·解脫技術與菩薩誓願的矛盾（本品主骨架）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>藥性分析</td><td>九相觀是破「淨顛倒」、對治貪欲的<b>烈藥</b>——藥力極強，能在短時間引發強烈厭患心，催人疾入涅槃（副作用即在此）</td></tr><tr><td>邏輯陷阱</td><td>論主設問：「聲聞如是觀，欲疾入涅槃；<b>菩薩觀是九相，云何不墮二乘證</b>？」菩薩誓不疾入涅槃，卻同修此催人厭世的烈藥，憑什麼不翻車</td></tr><tr><td>問題本質</td><td>不是「要不要修九相」，而是「<b>心智軟體</b>（Mindset）如何改變<b>修行硬體</b>（Practice）運作結果」——同一硬體裝不同軟體，跑出完全不同的程式邏輯</td></tr><tr><td>分水嶺</td><td>同一入口（九相觀）展開兩條路徑——<b>聲聞</b>：厭離→恐懼三界→疾入涅槃（半途終止）；<b>菩薩</b>：三重防護網→中觀煞車→回入娑婆（迴路繼續）</td></tr></tbody></table><table class="c21p5-tbl"><caption>二、菩薩的三重防護網（確保不墮二乘的邏輯架構）</caption><thead><tr><th>防線</th><th>內容</th></tr></thead><tbody><tr><td>第一重·大悲（動機層）</td><td><b>以身試藥的醫者心</b>——「如人憐愍病者，合和諸藥以療之」；聲聞為「逃生」、菩薩為「求藥」。為救人而吃藥，自不會隨藥性而去（在研發位置、非服藥求死位置）</td></tr><tr><td>第二重·大願（格局層）</td><td><b>不住一門的無限賽局</b>——「我未具足一切佛法，不入涅槃，是為一法門，我不應住此一門」；九相只是八萬四千法門之一，停在此門即半途而廢</td></tr><tr><td>第三重·大智（核心層）</td><td><b>中觀智慧的緊急煞車</b>——當厭患心強到動念疾入涅槃的The Critical Moment，立刻啟動中觀：「一切法相空，空中無無常，何況有不淨」；逃離的對象本非實有，何來真實的逃</td></tr><tr><td>三層關係</td><td>三層相互嵌套、缺一不可——前兩層在極限情境可能失守，故需第三層能在瞬間生效的最終煞車；把「會誤殺菩薩誓願」的烈藥，重新校準為「安全可用」的工具</td></tr></tbody></table><table class="c21p5-tbl"><caption>三、中觀三解密與三種視角（核心煞車內部齒輪·合題）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>緣起無自性</td><td>「是不淨皆從因緣和合生，無有自性，皆歸空相」——不淨既無自性，「因不淨而逃離」在邏輯上失去立足點</td></tr><tr><td>假名對治</td><td>「但為破淨顛倒故習此不淨」——不淨觀只是破「淨顛倒」的假名工具；淨與不淨兩端都不實，從一端逃向另一端是多此一舉</td></tr><tr><td>味·過·出辯證</td><td>色中有<b>味</b>（淨相因緣）故眾生著、有<b>過</b>（過惡）故能厭、有<b>出</b>（出相）故能脫——三角辯證令「菩薩不於不淨中沒、早取涅槃」</td></tr><tr><td>三種視角</td><td><b>醫者視角</b>（親身試藥以配眾生）·<b>過客視角</b>（此法為旅途一站非終點、厭離只是路上風景非停車信號）·<b>全息視角</b>（一切法相空、如幻佛事）</td></tr><tr><td>黃金三角</td><td><b>大悲（為何修）＋大願（只是一門）＋大智（空性煞車）</b>三者總持——把九相觀從「會把菩薩推進涅槃」的險局，轉為「不於不淨中沒」的如幻佛事</td></tr></tbody></table><p class="c21p5-note">本品用一個「九相觀」的技術問題，演繹出整個大乘修證的心法骨幹——同一份藥（九相觀），聲聞服之疾入涅槃、菩薩服之回入娑婆，關鍵在「軟體層」的三重防護：<b>大悲</b>使觀修從一開始就是「研發」而非「逃」，<b>大願</b>使此法只是旅途一站，<b>大智</b>則在最危險的瞬間以「一切法相空，空中無無常，何況有不淨」把人從疾入涅槃的軌道上拉回。中觀就是那座支點，讓「淨」與「不淨」兩端都不再實有，從一端逃向另一端便成了多此一舉。</p></div></div>
+<script id="wy-c21p5-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c21p5Btn"),BOX=document.getElementById("c21p5Box"),MODAL=document.getElementById("c21p5Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=4;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#vidFab,.vid-fab,#videoFab,#wyVideoBtn,#wyFab,#wy-fab,#vid-floating,#floatingYt,.video-fab,.wy-vbtn,.wy-video-fab,.floating-yt",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c21p5Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C21P5:END-->
 </body>
 </html>
