@@ -1066,5 +1066,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-C21P7:END-->
+<!--WY-C21P8:BEGIN-->
+<style id="wy-c21p8-css">
+.c21p8-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c21p8-fabbox.show{display:block;}
+.c21p8-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c21p8-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c21p8-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c21p8-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c21p8-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c21p8-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c21p8-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c21p8-modal.open{display:flex;}
+.c21p8-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c21p8-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c21p8-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c21p8-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c21p8-close:hover{background:#e3d5b8;}
+.c21p8-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c21p8-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c21p8-tbl th,.c21p8-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c21p8-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c21p8-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c21p8-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c21p8-tbl b{color:#8b2500;}
+.c21p8-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c21p8-note b{color:#8b2500;}
+@media(max-width:900px){.c21p8-fabbox{right:14px;}.c21p8-tbl{font-size:11.5px;}.c21p8-card{padding:26px 14px 16px;}}
+</style>
+<div class="c21p8-fabbox" id="c21p8Box"><button class="c21p8-btn" id="c21p8Btn" type="button" aria-label="開啟全景總表"><span class="c21p8-ic">▦</span><span class="c21p8-ls"><span class="c21p8-l1">本品 · 念佛 · 佛陀功德與禪智解脫論</span><span class="c21p8-l2">見果知因 · 五分法身 · 諸佛法無量不可思議</span></span></button></div><div class="c21p8-modal" id="c21p8Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c21p8-card"><button class="c21p8-close" id="c21p8Close" type="button" aria-label="關閉">×</button><h3>卷二十一·第八品 念佛（五分法身）· 全景總表</h3><p class="sub">卷二十一・第八品｜見果知因・五分法身・阿頭摩雷電・日出三昧・能量守恆・緣起性空</p><table class="c21p8-tbl"><caption>一、認識論的提問·見果知因（本品主骨架）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>念佛內容</td><td>此處「念佛」非念名號相好，而是憶念佛所成就的<b>五種功德法身</b>——戒眾、定眾、慧眾、解脫眾、解脫知見眾（五分法身）</td></tr><tr><td>認識論難題</td><td>戒以身口業清淨可知、慧以分別說法可知（皆顯而易見）；唯獨<b>禪定</b>屬純粹內在心行、旁人無從觀測——連舍利弗目揵連都不能知其名，凡夫如何確認佛定具足</td></tr><tr><td>冰山譬喻</td><td>戒慧是浮出水面可見的一角、禪定是沈沒水下的主體卻恰隱於不可見——論主策略不硬碰不可觀測的定，而繞道「由果證因」</td></tr><tr><td>見果知因法則</td><td>三喻建立——<b>蓮華喻</b>（見華大知池深）·<b>燈明喻</b>（見明大知油多）·<b>果因喻</b>（見果大知因大）；果相愈大、因力必愈深</td></tr></tbody></table><table class="c21p8-tbl"><caption>二、五分法身具足·由顯至隱再反顯（實修細目）</caption><thead><tr><th>法身</th><th>內容</th></tr></thead><tbody><tr><td>戒眾</td><td>身口業清淨——落在「可見」的明處，前文已明，本品從定眾起</td></tr><tr><td>定眾</td><td>由可見神變反證不可見深定——<b>阿頭摩國雷電</b>（雷電致牛死、佛言「我有心想但入定耳」，證佛定是「有心想而不為境動」非無心昏沈）·<b>日出三昧</b>（毛孔普放光、光中化七寶蓮華坐佛遍滿十方）</td></tr><tr><td>慧眾</td><td>佛慧具足源於<b>大悲驅動</b>——聲聞智以「求自度」為限故封限、佛智以「大悲度眾」為驅動故無限擴展；斷法愛、離二邊（不墮縱欲計常/苦行斷滅）、降伏大論議師、出諸觀上清淨無礙</td></tr><tr><td>解脫眾</td><td>根本解脫·遍得解脫·共解脫三重結構——見道與修道機制；由慧眾之離二邊自然導出解脫（斷結證滅）</td></tr><tr><td>解脫知見眾</td><td>自覺與覺他的後設認知——不僅自證解脫、更「知」自己已解脫（解脫知見）；應病與藥的無礙方便，隨眾生根機而施</td></tr><tr><td>能量守恆</td><td>「大神變遍滿十方」這樣的輸出，必然需要「禪定具足」作能量源——若無深不可測的禪定作動力，便無法發動如此廣大的神變（由神變之果必知深定之因）</td></tr></tbody></table><table class="c21p8-tbl"><caption>三、中觀統攝·念佛功德與修證體系（合題）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>見果知因總則</td><td>不去硬碰不可觀測的定，而以智慧、神通這些確實可見的果為證據——「大智慧具足故，當知禪定必具足」；由顯至隱、再由隱反顯</td></tr><tr><td>緣起性空底層</td><td>神通與智慧的底層運作邏輯皆源於<b>緣起性空</b>——正因無自性，故能隨大悲無限擴展、發為無量神變（有自性則封限、無自性則無盡）</td></tr><tr><td>二諦融通</td><td>世俗諦上五分法身歷歷可證（戒定慧解脫解脫知見）、勝義諦上皆歸性空——二諦融通，功德宛然而畢竟空寂</td></tr><tr><td>五分法身統一</td><td>戒定慧解脫解脫知見五眾統一於一佛——彼此非孤立：大悲驅動慧、慧離二邊成解脫、解脫自知成解脫知見，深定則為一切之能量源</td></tr><tr><td>結勸淨信</td><td>「阿難歎言：未曾有也！世尊！<b>諸佛法無量不可思議</b>」——最終歸結於對佛五分法身的淨信，念佛三昧於此圓成</td></tr></tbody></table><p class="c21p8-note">本品從一個精微的<b>認識論難題</b>切入——戒律表現於身行、智慧流露於言說皆可見可聞，唯獨「禪定」是純粹內在心行、旁人無從觀測，那麼凡夫如何確認佛的禪定具足？論主的回答是一套嚴密的「<b>見果知因</b>」推論：透過可見的果（智慧辯才、神通變化），逆推不可見的因（深妙禪定），如見蓮華之大而知池水之深。而神通與智慧的底層皆源於<b>緣起性空</b>——正因無自性，方能隨大悲無限擴展、發為遍滿十方的無量神變。五分法身歷歷可證而畢竟性空，最終歸於「諸佛法無量不可思議」的淨信。</p></div></div>
+<script id="wy-c21p8-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c21p8Btn"),BOX=document.getElementById("c21p8Box"),MODAL=document.getElementById("c21p8Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=7;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#vidFab,.vid-fab,#videoFab,#wyVideoBtn,#wyFab,#wy-fab,#vid-floating,#floatingYt,.video-fab,.wy-vbtn,.wy-video-fab,.floating-yt",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c21p8Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C21P8:END-->
 </body>
 </html>
