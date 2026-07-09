@@ -1500,7 +1500,7 @@ if(!CH.length||!BTN||!BOX||!MODAL)return;
 var TARGET=6;
 function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
 function place(){
-  var sels=[".c21p7-fabbox","#wyVideoBtn",".wy-vfab",".wy-ebox",".video-fab"],topY=null;
+  var sels=[".c21map-fabbox",".c21p7-fabbox","#wyVideoBtn",".wy-vfab",".wy-ebox",".video-fab"],topY=null;
   for(var i=0;i<sels.length;i++){var el=document.querySelector(sels[i]);if(!el)continue;var r=el.getBoundingClientRect(),st=getComputedStyle(el);if(r.height>4&&st.display!=="none"&&st.visibility!=="hidden"){if(topY===null||r.top<topY)topY=r.top;}}
   var base=(topY!==null)?Math.round(window.innerHeight-topY)+10:130;
   BOX.style.bottom=base+"px";
