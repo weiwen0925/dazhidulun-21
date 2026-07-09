@@ -1464,57 +1464,7 @@ var sres=sm.querySelector('#wysResults');
 /* 輸入框放同源 iframe:獨立 document,頁面防護層(全域鍵盤/選取攔截)完全不影響打字 */
 var ifr=sm.querySelector('.wysm-if'),idoc=ifr.contentDocument;
 idoc.open();
-idoc.write('<!DOCTYPE html><html><head><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet"><style>html,body{margin:0;padding:0;background:transparent;overflow:hidden;}input{width:100%;box-sizing:border-box;background:transparent;border:none;outline:none;color:#f0e2c4;font-family:"Noto Serif TC",serif;font-size:18px;letter-spacing:2px;padding:10px 4px 12px;caret-color:#e3c085;border-bottom:1px solid rgba(217,184,124,.4);}input:focus{border-bottom-color:#d9b87c;}input::placeholder{color:#7a6a52;letter-spacing:2px;font-size:15px;}input::-webkit-search-cancel-button{-webkit-appearance:none;}</style></head><body><input id="q" type="search" autocomplete="off" placeholder="輸入關鍵詞，多詞可用空格分隔…"/><!--WY-C21B7:BEGIN-->
-<style id="wy-c21b7-css">
-.c21b7-fabbox{position:fixed;right:22px;bottom:130px;z-index:122;display:none;}
-.c21b7-fabbox.show{display:block;}
-.c21b7-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#6a4b2a,#3a2a17);padding:8px 15px;border-radius:22px;border:1px solid rgba(212,168,75,.7);box-shadow:0 4px 16px rgba(0,0,0,.32);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
-.c21b7-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(212,168,75,.55);}
-.c21b7-ic{font-size:16px;line-height:1;color:#f0d489;}
-.c21b7-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
-.c21b7-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
-.c21b7-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
-.c21b7-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
-.c21b7-modal.open{display:flex;}
-.c21b7-card{position:relative;background:#fbf7ee;max-width:940px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
-.c21b7-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
-.c21b7-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
-.c21b7-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
-.c21b7-close:hover{background:#e3d5b8;}
-.c21b7-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
-.c21b7-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
-.c21b7-tbl th,.c21b7-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
-.c21b7-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
-.c21b7-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
-.c21b7-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
-.c21b7-tbl b{color:#8b2500;}
-.c21b7-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
-.c21b7-note b{color:#8b2500;}
-@media(max-width:900px){.c21b7-fabbox{right:14px;}.c21b7-tbl{font-size:11.5px;}.c21b7-card{padding:26px 14px 16px;}}
-</style>
-<div class="c21b7-fabbox" id="c21b7Box"><button class="c21b7-btn" id="c21b7Btn" type="button" aria-label="開啟佛號總表"><span class="c21b7-ic">☸</span><span class="c21b7-ls"><span class="c21b7-l1">本品 · 佛十號 · 名號原因 · 念佛中觀</span><span class="c21b7-l2">佛號總表</span></span></button></div><div class="c21b7-modal" id="c21b7Modal" role="dialog" aria-modal="true" aria-label="佛號總表"><div class="c21b7-card"><button class="c21b7-close" id="c21b7Close" type="button" aria-label="關閉">×</button><h3>佛號總表 · 佛十號與念佛的中觀理由</h3><p class="sub">卷二十一·第七品 念佛三昧釋論｜十號名號原因（原典）· 因果鏈三維全息 · 念佛中觀理由</p><table class="c21b7-tbl"><caption>一、佛 · 十號總表（名號與立名之由 · 原典）</caption><thead><tr><th>序 · 名號</th><th>梵名 · 義譯</th><th>立名之由（原典）</th></tr></thead><tbody><tr><td>一 · 多陀阿伽度</td><td>Tathāgata<br>如來 / 如去</td><td>「亦如過去未來現在十方諸佛，於眾生中起大悲心、行六波羅蜜、得諸法相，來至阿耨多羅三藐三菩提中」——與三世諸佛<b>如實同來、同去</b>，故名如來；「如」＝無特例、無偏差的普遍真理</td></tr><tr><td>二 · 阿羅呵</td><td>Arhat<br>應供</td><td>「有如是功德故，應受一切諸天、世人<b>最上供養</b>」——既與三世諸佛所到所證無別，即是最上福田（因如實，所以應供）</td></tr><tr><td>三 · 三藐三佛陀</td><td>Samyak-saṃbuddha<br>正遍知</td><td>「<b>正</b>名諸法不動不壞相，<b>遍</b>名不為一法二法故，悉知一切法無餘不盡」——正＝諸法本相（非相對於邪）、遍＝不取一法而徹底周遍</td></tr><tr><td>四 · 鞞闍遮羅那三般那</td><td>Vidyā-caraṇa-sampanna<br>明行足</td><td>「依智慧、持戒具足故，得正遍智慧」——<b>智慧</b>（初發意至金剛三昧相應智慧）＋<b>持戒</b>（身口業清淨），二行如車兩輪</td></tr><tr><td>五 · 修伽陀</td><td>Sugata<br>善逝</td><td>「若行是二行得善去，如車有兩輪；<b>如先佛所去處，佛亦如是去</b>」——善去＝目標正確（同諸佛所去之涅槃）＋路徑正確（智戒雙輪無偏）</td></tr><tr><td>六 · 路迦憊</td><td>Lokavid<br>世間解</td><td>「<b>知世間、知世間因、知世間盡、知世間盡道</b>」——即四聖諦（苦集滅道）的展開；佛非不知世間，而是對世間有完整因果視野</td></tr><tr><td>七 · 阿耨多羅富樓沙曇藐婆羅提</td><td>Anuttara-puruṣa-damya-sārathi<br>無上士調御丈夫</td><td>「知世間已，<b>調御眾生，於種種師中最為無上</b>」——所教無上（出離生死的終極道）＋教者無上（天人外道聖者皆無能比肩）</td></tr><tr><td>八 · 貰多提婆魔㝹舍</td><td>Śāstā-deva-manuṣyāṇāṃ<br>天人師</td><td>「能以<b>三種道滅三毒</b>，令眾生行三乘道」——戒道滅貪、定道滅瞋、慧道滅癡；教化對象遍及人間與諸天（三界）</td></tr><tr><td>九 · 佛陀</td><td>Buddha<br>佛</td><td>「<b>一切智慧成就</b>故；過去未來現在、盡不盡、動不動，一切世間了了悉知」——自覺覺他、智慧圓滿成就</td></tr><tr><td>十 · 婆伽婆</td><td>Bhagavān<br>世尊</td><td>「得是九種名號，有<b>大名稱，遍滿十方</b>」——總攝以上一切於最大圓滿，名稱功德遍滿十方（經中佛自說如是名號，應當作是念佛）</td></tr></tbody></table><table class="c21b7-tbl"><caption>二、十號因果鏈 · 三維全息（名號如何環環相生）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>因果鏈性質</td><td>十號不是十個並列的形容詞，而是「<b>前一號的果、後一號的因</b>」——佛之所以是佛，是一個有結構、可推理、可念誦的因果系統</td></tr><tr><td>前段 · 自身結構</td><td>如來（真理本身）→ 應供（倫理地位）→ 正遍知（智的內容）→ 明行足（修的結構）→ 善逝（去得對又去得善）——鏈條的第一個閉環</td></tr><tr><td>後段 · 作用世間</td><td>世間解（知世間因與盡道）→ 無上士調御丈夫（至上教育家）→ 天人師（滅三毒、教三乘）→ 佛陀（一切智慧成就）→ 世尊（大名稱遍滿）；主軸由「智慧的內在結構」轉向「智慧如何作用於眾生」</td></tr><tr><td>三維全息</td><td><b>邏輯層</b>（十號·佛「是什麼」·真理無錯謬）＋<b>美學層</b>（三十二相·佛「如何顯現」·莊嚴攝心奪俗情）＋<b>哲學層</b>（中觀·佛「為何如此」·緣起性空）</td></tr><tr><td>三角總攝</td><td><b>真理（十號）／莊嚴（32相）／性空（中觀）</b>三者缺一不可，合為「佛」之全息——念佛＝一心 × 智慧 × 三維全息（一念之中三維齊備）</td></tr></tbody></table><table class="c21b7-tbl"><caption>三、念佛的中觀理由（為何念佛是「得如實智慧」而非情感崇拜）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>正遍知＝性空</td><td>佛憑什麼「不動不壞」？<b>因為性空</b>——一切法本來無自性，無自性故不增不減、不增不減故不動不壞。故等式成立：<b>緣起＝性空＝不動不壞＝正遍知＝智慧</b></td></tr><tr><td>智慧即體證無自性</td><td>正遍智慧「<b>不從無因得、亦不從無緣得</b>」，須依智慧持戒二緣具足——這正是「緣起」的另一種表達；緣起即性空、性空即智慧，三者循環互證</td></tr><tr><td>如來 · 如幻救度</td><td>如來的「如」是<b>緣起所現的來</b>——「如幻人救度幻人」，救度者與被救度者同是緣起無自性；正因如幻，救度才徹底：不是把眾生從輪迴拉出，而是讓眾生看見<b>輪迴本來無自性</b></td></tr><tr><td>戒定慧根源於無自性</td><td>佛持戒「<b>不求果報、不向二乘、不雜結使</b>」三不——所否定的果報執、道果執、結使執，本質都是「自性執」；戒眾、定眾、慧眾皆以無自性為根基，離中觀則全息架構是無根之木</td></tr><tr><td>悲智雙運</td><td>見眾生苦而心動（慈悲）＋見苦是緣起無自性而心不動（智慧）＝<b>動而不動、不動而動</b>；純智無悲墮二乘、純悲無智困於相，交集處才是佛陀人格的真實位置</td></tr><tr><td>凡夫 vs 智者</td><td>凡夫念佛（對象＝身相·動機＝求庇佑·邏輯＝神力）／智者念佛（對象＝實相·動機＝求真理·邏輯＝緣起）——同一句佛號，見地是否徹底決定層次；智者不否定凡夫，而是把它收進更深的視野</td></tr><tr><td>觀相→明理→證空</td><td>實修迴圈——以勝境奪俗情（觀相·美學）→ 理解十號因果鏈（明理·邏輯）→ 體證相好皆緣起無自性（證空·哲學）；三步循環往復，終至觀即明、明即證、證即觀</td></tr></tbody></table><p class="c21b7-note">本品開卷即問「云何是念佛」，答案是「一心念佛，<b>得如實智慧</b>」——念不是稱名，而是對「佛之所以為佛」的全部結構作心智契入。佛十號是邏輯骨幹、三十二相是美學介面、中觀性空是終極判準：<b>真理使念佛有內容、莊嚴使念佛有介面、性空使念佛不執</b>。所念之佛、能念之心皆緣起無自性，故念而無念、無念而念——這就是龍樹「念佛三昧」把念佛從凡夫的「求庇佑」推到智者的「證實相」的真正本領。</p></div></div>
-<script id="wy-c21b7-js">(function(){
-var CH=document.querySelectorAll("section.chapter");
-var BTN=document.getElementById("c21b7Btn"),BOX=document.getElementById("c21b7Box"),MODAL=document.getElementById("c21b7Modal");
-if(!CH.length||!BTN||!BOX||!MODAL)return;
-var TARGET=6;
-function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
-function place(){
-  var sels=[".c21map-fabbox",".c21p7-fabbox","#wyVideoBtn",".wy-vfab",".wy-ebox",".video-fab"],topY=null;
-  for(var i=0;i<sels.length;i++){var el=document.querySelector(sels[i]);if(!el)continue;var r=el.getBoundingClientRect(),st=getComputedStyle(el);if(r.height>4&&st.display!=="none"&&st.visibility!=="hidden"){if(topY===null||r.top<topY)topY=r.top;}}
-  var base=(topY!==null)?Math.round(window.innerHeight-topY)+10:130;
-  BOX.style.bottom=base+"px";
-}
-function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
-var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
-window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
-BTN.addEventListener("click",function(){MODAL.classList.add("open");});
-MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c21b7Close")MODAL.classList.remove("open");});
-document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
-upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
-})();</script>
-<!--WY-C21B7:END-->
-</body></html>');
+idoc.write('<!DOCTYPE html><html><head><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet"><style>html,body{margin:0;padding:0;background:transparent;overflow:hidden;}input{width:100%;box-sizing:border-box;background:transparent;border:none;outline:none;color:#f0e2c4;font-family:"Noto Serif TC",serif;font-size:18px;letter-spacing:2px;padding:10px 4px 12px;caret-color:#e3c085;border-bottom:1px solid rgba(217,184,124,.4);}input:focus{border-bottom-color:#d9b87c;}input::placeholder{color:#7a6a52;letter-spacing:2px;font-size:15px;}input::-webkit-search-cancel-button{-webkit-appearance:none;}</style></head><body><input id="q" type="search" autocomplete="off" placeholder="輸入關鍵詞，多詞可用空格分隔…"/></body></html>');
 idoc.close();
 var sin=idoc.getElementById('q');
 
@@ -1750,5 +1700,55 @@ else window.addEventListener('load',function(){setTimeout(go,300);});
 })();
 </script>
 <!--WY-GOTO:END-->
+<!--WY-C21B7:BEGIN-->
+<style id="wy-c21b7-css">
+.c21b7-fabbox{position:fixed;right:22px;bottom:130px;z-index:122;display:none;}
+.c21b7-fabbox.show{display:block;}
+.c21b7-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#6a4b2a,#3a2a17);padding:8px 15px;border-radius:22px;border:1px solid rgba(212,168,75,.7);box-shadow:0 4px 16px rgba(0,0,0,.32);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c21b7-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(212,168,75,.55);}
+.c21b7-ic{font-size:16px;line-height:1;color:#f0d489;}
+.c21b7-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c21b7-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c21b7-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c21b7-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c21b7-modal.open{display:flex;}
+.c21b7-card{position:relative;background:#fbf7ee;max-width:940px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c21b7-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c21b7-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c21b7-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c21b7-close:hover{background:#e3d5b8;}
+.c21b7-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c21b7-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c21b7-tbl th,.c21b7-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c21b7-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c21b7-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c21b7-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c21b7-tbl b{color:#8b2500;}
+.c21b7-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c21b7-note b{color:#8b2500;}
+@media(max-width:900px){.c21b7-fabbox{right:14px;}.c21b7-tbl{font-size:11.5px;}.c21b7-card{padding:26px 14px 16px;}}
+</style>
+<div class="c21b7-fabbox" id="c21b7Box"><button class="c21b7-btn" id="c21b7Btn" type="button" aria-label="開啟佛號總表"><span class="c21b7-ic">☸</span><span class="c21b7-ls"><span class="c21b7-l1">本品 · 佛十號 · 名號原因 · 念佛中觀</span><span class="c21b7-l2">佛號總表</span></span></button></div><div class="c21b7-modal" id="c21b7Modal" role="dialog" aria-modal="true" aria-label="佛號總表"><div class="c21b7-card"><button class="c21b7-close" id="c21b7Close" type="button" aria-label="關閉">×</button><h3>佛號總表 · 佛十號與念佛的中觀理由</h3><p class="sub">卷二十一·第七品 念佛三昧釋論｜十號名號原因（原典）· 因果鏈三維全息 · 念佛中觀理由</p><table class="c21b7-tbl"><caption>一、佛 · 十號總表（名號與立名之由 · 原典）</caption><thead><tr><th>序 · 名號</th><th>梵名 · 義譯</th><th>立名之由（原典）</th></tr></thead><tbody><tr><td>一 · 多陀阿伽度</td><td>Tathāgata<br>如來 / 如去</td><td>「亦如過去未來現在十方諸佛，於眾生中起大悲心、行六波羅蜜、得諸法相，來至阿耨多羅三藐三菩提中」——與三世諸佛<b>如實同來、同去</b>，故名如來；「如」＝無特例、無偏差的普遍真理</td></tr><tr><td>二 · 阿羅呵</td><td>Arhat<br>應供</td><td>「有如是功德故，應受一切諸天、世人<b>最上供養</b>」——既與三世諸佛所到所證無別，即是最上福田（因如實，所以應供）</td></tr><tr><td>三 · 三藐三佛陀</td><td>Samyak-saṃbuddha<br>正遍知</td><td>「<b>正</b>名諸法不動不壞相，<b>遍</b>名不為一法二法故，悉知一切法無餘不盡」——正＝諸法本相（非相對於邪）、遍＝不取一法而徹底周遍</td></tr><tr><td>四 · 鞞闍遮羅那三般那</td><td>Vidyā-caraṇa-sampanna<br>明行足</td><td>「依智慧、持戒具足故，得正遍智慧」——<b>智慧</b>（初發意至金剛三昧相應智慧）＋<b>持戒</b>（身口業清淨），二行如車兩輪</td></tr><tr><td>五 · 修伽陀</td><td>Sugata<br>善逝</td><td>「若行是二行得善去，如車有兩輪；<b>如先佛所去處，佛亦如是去</b>」——善去＝目標正確（同諸佛所去之涅槃）＋路徑正確（智戒雙輪無偏）</td></tr><tr><td>六 · 路迦憊</td><td>Lokavid<br>世間解</td><td>「<b>知世間、知世間因、知世間盡、知世間盡道</b>」——即四聖諦（苦集滅道）的展開；佛非不知世間，而是對世間有完整因果視野</td></tr><tr><td>七 · 阿耨多羅富樓沙曇藐婆羅提</td><td>Anuttara-puruṣa-damya-sārathi<br>無上士調御丈夫</td><td>「知世間已，<b>調御眾生，於種種師中最為無上</b>」——所教無上（出離生死的終極道）＋教者無上（天人外道聖者皆無能比肩）</td></tr><tr><td>八 · 貰多提婆魔㝹舍</td><td>Śāstā-deva-manuṣyāṇāṃ<br>天人師</td><td>「能以<b>三種道滅三毒</b>，令眾生行三乘道」——戒道滅貪、定道滅瞋、慧道滅癡；教化對象遍及人間與諸天（三界）</td></tr><tr><td>九 · 佛陀</td><td>Buddha<br>佛</td><td>「<b>一切智慧成就</b>故；過去未來現在、盡不盡、動不動，一切世間了了悉知」——自覺覺他、智慧圓滿成就</td></tr><tr><td>十 · 婆伽婆</td><td>Bhagavān<br>世尊</td><td>「得是九種名號，有<b>大名稱，遍滿十方</b>」——總攝以上一切於最大圓滿，名稱功德遍滿十方（經中佛自說如是名號，應當作是念佛）</td></tr></tbody></table><table class="c21b7-tbl"><caption>二、十號因果鏈 · 三維全息（名號如何環環相生）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>因果鏈性質</td><td>十號不是十個並列的形容詞，而是「<b>前一號的果、後一號的因</b>」——佛之所以是佛，是一個有結構、可推理、可念誦的因果系統</td></tr><tr><td>前段 · 自身結構</td><td>如來（真理本身）→ 應供（倫理地位）→ 正遍知（智的內容）→ 明行足（修的結構）→ 善逝（去得對又去得善）——鏈條的第一個閉環</td></tr><tr><td>後段 · 作用世間</td><td>世間解（知世間因與盡道）→ 無上士調御丈夫（至上教育家）→ 天人師（滅三毒、教三乘）→ 佛陀（一切智慧成就）→ 世尊（大名稱遍滿）；主軸由「智慧的內在結構」轉向「智慧如何作用於眾生」</td></tr><tr><td>三維全息</td><td><b>邏輯層</b>（十號·佛「是什麼」·真理無錯謬）＋<b>美學層</b>（三十二相·佛「如何顯現」·莊嚴攝心奪俗情）＋<b>哲學層</b>（中觀·佛「為何如此」·緣起性空）</td></tr><tr><td>三角總攝</td><td><b>真理（十號）／莊嚴（32相）／性空（中觀）</b>三者缺一不可，合為「佛」之全息——念佛＝一心 × 智慧 × 三維全息（一念之中三維齊備）</td></tr></tbody></table><table class="c21b7-tbl"><caption>三、念佛的中觀理由（為何念佛是「得如實智慧」而非情感崇拜）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>正遍知＝性空</td><td>佛憑什麼「不動不壞」？<b>因為性空</b>——一切法本來無自性，無自性故不增不減、不增不減故不動不壞。故等式成立：<b>緣起＝性空＝不動不壞＝正遍知＝智慧</b></td></tr><tr><td>智慧即體證無自性</td><td>正遍智慧「<b>不從無因得、亦不從無緣得</b>」，須依智慧持戒二緣具足——這正是「緣起」的另一種表達；緣起即性空、性空即智慧，三者循環互證</td></tr><tr><td>如來 · 如幻救度</td><td>如來的「如」是<b>緣起所現的來</b>——「如幻人救度幻人」，救度者與被救度者同是緣起無自性；正因如幻，救度才徹底：不是把眾生從輪迴拉出，而是讓眾生看見<b>輪迴本來無自性</b></td></tr><tr><td>戒定慧根源於無自性</td><td>佛持戒「<b>不求果報、不向二乘、不雜結使</b>」三不——所否定的果報執、道果執、結使執，本質都是「自性執」；戒眾、定眾、慧眾皆以無自性為根基，離中觀則全息架構是無根之木</td></tr><tr><td>悲智雙運</td><td>見眾生苦而心動（慈悲）＋見苦是緣起無自性而心不動（智慧）＝<b>動而不動、不動而動</b>；純智無悲墮二乘、純悲無智困於相，交集處才是佛陀人格的真實位置</td></tr><tr><td>凡夫 vs 智者</td><td>凡夫念佛（對象＝身相·動機＝求庇佑·邏輯＝神力）／智者念佛（對象＝實相·動機＝求真理·邏輯＝緣起）——同一句佛號，見地是否徹底決定層次；智者不否定凡夫，而是把它收進更深的視野</td></tr><tr><td>觀相→明理→證空</td><td>實修迴圈——以勝境奪俗情（觀相·美學）→ 理解十號因果鏈（明理·邏輯）→ 體證相好皆緣起無自性（證空·哲學）；三步循環往復，終至觀即明、明即證、證即觀</td></tr></tbody></table><p class="c21b7-note">本品開卷即問「云何是念佛」，答案是「一心念佛，<b>得如實智慧</b>」——念不是稱名，而是對「佛之所以為佛」的全部結構作心智契入。佛十號是邏輯骨幹、三十二相是美學介面、中觀性空是終極判準：<b>真理使念佛有內容、莊嚴使念佛有介面、性空使念佛不執</b>。所念之佛、能念之心皆緣起無自性，故念而無念、無念而念——這就是龍樹「念佛三昧」把念佛從凡夫的「求庇佑」推到智者的「證實相」的真正本領。</p></div></div>
+<script id="wy-c21b7-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c21b7Btn"),BOX=document.getElementById("c21b7Box"),MODAL=document.getElementById("c21b7Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=6;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+function place(){
+  var sels=[".c21map-fabbox",".c21p7-fabbox","#wyVideoBtn",".wy-vfab",".wy-ebox",".video-fab"],topY=null;
+  for(var i=0;i<sels.length;i++){var el=document.querySelector(sels[i]);if(!el)continue;var r=el.getBoundingClientRect(),st=getComputedStyle(el);if(r.height>4&&st.display!=="none"&&st.visibility!=="hidden"){if(topY===null||r.top<topY)topY=r.top;}}
+  var base=(topY!==null)?Math.round(window.innerHeight-topY)+10:130;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c21b7Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C21B7:END-->
 </body>
 </html>
