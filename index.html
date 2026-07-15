@@ -2319,5 +2319,56 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-BH21P7:END-->
+<!--WY-BH21P8:BEGIN-->
+<style id="wy-bh21p8-css">
+.bh21p8-fabbox{position:fixed;right:22px;bottom:150px;z-index:123;display:none;}
+.bh21p8-fabbox.show{display:block;}
+.bh21p8-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#4a5a68,#232d36);padding:8px 15px;border-radius:22px;border:1px solid rgba(150,180,205,.55);box-shadow:0 4px 16px rgba(0,0,0,.32);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.bh21p8-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(120,160,200,.5);}
+.bh21p8-ic{font-size:15px;line-height:1;color:#bcd4ea;}
+.bh21p8-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.bh21p8-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.bh21p8-l2{font-size:13px;font-weight:700;color:#eef4fa;white-space:nowrap;}
+.bh21p8-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(22,26,30,.6);padding:16px;}
+.bh21p8-modal.open{display:flex;}
+.bh21p8-card{position:relative;background:#fbf7ee;max-width:1080px;width:100%;max-height:90vh;overflow:auto;border:1px solid #d3cdbf;border-radius:14px;padding:28px 22px 20px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.bh21p8-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#3f5160;}
+.bh21p8-card .sub{margin:0 0 12px;font-family:"Noto Sans TC",sans-serif;font-size:12.5px;color:#5b6b78;}
+.bh21p8-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#eceef0;color:#3f5160;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.bh21p8-close:hover{background:#dde2e6;}
+.bh21p8-tbl{width:100%;border-collapse:collapse;font-size:12.8px;margin:.2em 0 1em;}
+.bh21p8-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#3f5160;font-size:14px;text-align:left;margin:.4em 0 .5em;}
+.bh21p8-tbl th,.bh21p8-tbl td{border:1px solid #d8d2c4;padding:.5em .65em;text-align:left;vertical-align:top;line-height:1.72;}
+.bh21p8-tbl thead th{background:#3f5160;color:#eef4fa;font-weight:700;position:sticky;top:0;}
+.bh21p8-tbl thead th:nth-child(1){width:32%;}.bh21p8-tbl thead th:nth-child(2){width:41%;}.bh21p8-tbl thead th:nth-child(3){width:27%;}
+.bh21p8-src{font-family:"Noto Serif TC",serif;color:#5a4636;background:#f6efe0;letter-spacing:.3px;}
+.bh21p8-qa{font-family:"Noto Serif TC",serif;color:#3d4f2f;background:#eef2e2;letter-spacing:.3px;}
+.bh21p8-guan{background:#eef2f5;color:#37505f;}
+.bh21p8-tbl tbody tr:nth-child(even) td{background:#faf6ee;}
+.bh21p8-tbl tbody tr:nth-child(even) td.bh21p8-guan{background:#e8eef2;}
+.bh21p8-tbl tbody tr:nth-child(even) td.bh21p8-qa{background:#e7ecdb;}
+.bh21p8-tbl b{color:#8b2500;}
+.bh21p8-guan b{color:#2f6b5a;}
+.bh21p8-note{font-size:12px;color:#4a5560;line-height:1.95;background:#eef2f5;border-left:3px solid #7f9cb5;border-radius:0 6px 6px 0;padding:11px 14px;margin:2px 0 0;}
+.bh21p8-note b{color:#8b2500;}
+@media(max-width:900px){.bh21p8-fabbox{right:14px;}.bh21p8-tbl{font-size:11px;}.bh21p8-card{padding:22px 12px 14px;}}
+</style>
+<div class="bh21p8-fabbox" id="bh21p8Box"><button class="bh21p8-btn" id="bh21p8Btn" type="button" aria-label="開啟白話翻譯表"><span class="bh21p8-ic">譯</span><span class="bh21p8-ls"><span class="bh21p8-l1">本品 · 原文·白話·中觀</span><span class="bh21p8-l2">白話翻譯表</span></span></button></div><div class="bh21p8-modal" id="bh21p8Modal" role="dialog" aria-modal="true"><div class="bh21p8-card"><button class="bh21p8-close" id="bh21p8Close" type="button" aria-label="關閉">×</button><h3>卷二十一 · 第8品 白話翻譯表（念佛·五分法身·見果知因）</h3><p class="sub">大智度論卷二十一·念佛（五分法身）· 原文↔白話↔中觀概念 逐段對照</p><table class="bh21p8-tbl"><caption>念佛（五分法身） 白話翻譯表 · 原文｜白話翻譯｜中觀概念（共12段）</caption><thead><tr><th>原文</th><th>白話翻譯</th><th>中觀概念</th></tr></thead><tbody><tr><td class="bh21p8-qa">問曰：持戒，以身、口業清淨故可知；智慧，以分別說法能除眾生疑故可知；定者，餘人修定尚不可知，何況於佛，云何得知？</td><td>有人提問道：持戒這件事，可以透過身業、口業是否清淨來得知；智慧這件事，可以透過能否分別解說佛法、破除眾生疑惑來得知；但是禪定呢？就連一般人修定的境界都難以從外部得知，何況是佛陀的禪定，又要如何才能知道呢？</td><td class="bh21p8-guan"><b>認識論的核心難題</b>——這一問精準點出本品要處理的張力：戒與慧都能透過外顯的行為（身口業、說法）驗證，唯獨禪定是純粹內在的心行，旁人完全無從觀測，凡夫又如何能確認佛的禪定具足？</td></tr><tr><td class="bh21p8-qa">答曰：大智慧具足故，當知禪定必具足。譬如見蓮華大，必知池亦深大；又如燈明大者，必知蘇油亦多。亦以佛神通變化力無量無比故，知禪定力亦具足；亦如見果大故，知因亦必大。</td><td>回答說：正因為佛的大智慧圓滿具足，就可以推知禪定也必然具足圓滿。就像看見蓮花碩大，便可以推知池水必定又深又廣；又如看見燈火明亮碩大，便可以推知燈油必定豐足。同樣地，由於佛的神通變化之力無量無比，也可以推知禪定之力必然具足；這正如同看見果實碩大，便能推知樹根必定深厚廣大。</td><td class="bh21p8-guan"><b>見果知因·三喻立則</b>——論主不正面回應「定不可知」的難題，而是繞道建立一套推論法則：蓮華喻（果大知池深）、燈明喻（光大知油多）、果因喻（果大知因大），以可見的智慧與神通為果，逆推不可見的禪定為因。</td></tr><tr><td class="bh21p8-src">佛在阿頭摩國林樹下坐，入禪定。是時大雨雷電霹靂，有四特牛、耕者二人，聞聲怖死。須臾便晴，佛起經行。有一居士禮佛足已，隨從佛後，白佛言：「世尊！向者雷電霹靂，有四特牛、耕者二人，聞聲怖死，世尊聞不？」</td><td>佛陀當時在阿頭摩國的樹林下靜坐，進入禪定之中。那時天空忽然降下大雨，雷電交加、霹靂震響，有四頭公牛與兩位耕田的農夫，因為被雷聲震嚇而當場死去。不久之後天氣便放晴了，佛陀起身經行。這時有一位居士向佛陀頂禮之後，跟隨在佛陀身後，對佛陀說：「世尊！方才雷電霹靂大作，有四頭公牛與兩位耕田的人，被雷聲嚇死了，世尊您聽見了嗎？」</td><td class="bh21p8-guan"><b>以事證定·阿頭摩國公案</b>——這則公案正是「見果知因」的第一個實例：用一個外境劇烈到能嚇死牛與人的巨大雷聲，來反襯佛陀定境之深——若定力不足，豈能對如此震撼的境界毫無所動？</td></tr><tr><td class="bh21p8-src">佛時入日出三昧，如日出光明照閻浮提；佛身如是，毛孔普出光明，遍照十方恒河沙等世界。一一光中出七寶千葉蓮華，一一華上皆有坐佛……遍滿十方。</td><td>佛陀當時進入了「日出三昧」，就如同太陽升起、光明照耀整個閻浮提大地一般；佛的色身也是這樣，全身毛孔一齊放出光明，遍照十方恆河沙數那樣多的世界。每一道光明之中，都湧現出七寶所成、擁有千片花瓣的蓮花，每一朵蓮花上又都端坐著一尊化佛……如此遍滿十方。</td><td class="bh21p8-guan"><b>能量守恆·神變即定力的外顯</b>——毛孔遍放光明、化現無量寶蓮坐佛，如此遍滿十方的大神變，正是「見果知因」法則的第二個實例：若無深不可測的禪定作為動力源，絕不可能發動如此廣大的能量輸出，由神變之果，反推深定之因。</td></tr><tr><td class="bh21p8-src">以善修大悲智慧故，具足慧眾；餘人無是大悲，雖有智慧，不得具足。大悲欲度眾生，求種種智慧故……</td><td>由於善於修習大悲與智慧的緣故，佛陀的慧眾因而具足圓滿；其他人由於沒有這樣的大悲，即使擁有智慧，也無法圓滿具足。因為大悲想要度化眾生，才會不斷追求種種智慧……</td><td class="bh21p8-guan"><b>大悲驅動智慧</b>——這是佛智無限擴展的關鍵機制：聲聞的智慧以「求自度」為限，故有其邊界；佛的智慧以「大悲度眾」為驅動力，眾生無盡、大悲無盡，智慧便隨之無限擴展，沒有封頂之處。</td></tr><tr><td class="bh21p8-src">及斷法愛，滅六十二邪見，不墮二邊：若受五欲樂，若修身苦道；若斷滅，若計常；若有、若無等，如是諸法邊。</td><td>又能斷除對佛法生起的貪愛執著，滅除六十二種邪見，不墮於任何一種極端：不論是耽溺於五欲享樂的一邊，還是修習自苦的苦行之道的一邊；不論是主張斷滅的一邊，還是主張恆常不變的一邊；乃至執著「有」或執著「無」等等，這一切都是諸法的邊見，佛皆能遠離。</td><td class="bh21p8-guan"><b>離二邊＝中道的具體展開</b>——這正是中觀「不落二邊」的實踐版本：不縱欲亦不苦行、不斷滅亦不計常、不執有亦不執無，佛的智慧之所以圓滿，正在於徹底超越一切對立的邊見，安住於不落兩端的中道。</td></tr><tr><td class="bh21p8-src">譬如一居士清朝見大雨處，語眾人言：「昨夜雨龍，其力甚大！」眾人言：「汝何以知之？」答言：「我見地濕、泥多，山崩、樹折，殺諸鳥獸，以此故知龍力為大。」佛亦如是，甚深智慧，雖非眼見……以是可知佛智慧多。</td><td>譬如有一位居士，清晨看見一片剛下過大雨的地方，就對眾人說：「昨夜有龍降雨，牠的力量真是強大啊！」眾人便問他：「你怎麼知道的呢？」他回答說：「我看見地面潮濕、泥濘遍布，還有山崩、樹木折斷，各種鳥獸都被沖殺，因此我才知道龍的力量之大。」佛陀的智慧也是如此，雖然無法用肉眼親見……但憑藉這些外顯的跡象，便可以知道佛的智慧是如此廣大。</td><td class="bh21p8-guan"><b>由跡證因·智慧亦不可眼見</b>——這則譬喻再次示範「見果知因」的推論方式：智慧本身如同龍本身，皆不可眼見；但透過地濕、泥多、山崩、樹折等外顯痕跡，便能確知其力之大——智慧的廣大，同樣可以透過其外顯的作用與痕跡而得知。</td></tr><tr><td class="bh21p8-src">常清淨無量如虛空，以是故無礙。若觀生滅者，不得觀不生滅；觀不生滅者，不得觀生滅……</td><td>佛的智慧恆常清淨，無量無邊猶如虛空一般，因此稱為「無礙」。凡是只能觀「生滅」的人，就無法同時觀「不生不滅」；只能觀「不生不滅」的人，也無法同時觀「生滅」……唯有佛能夠圓融無礙地兼觀二者。</td><td class="bh21p8-guan"><b>無礙＝超越生滅與不生滅的對立</b>——凡夫的觀智受限於一種視角，只能擇一而觀；佛的智慧則能同時透徹生滅（世俗諦）與不生不滅（勝義諦）兩個層面而無所滯礙，這正是二諦圓融的具體展現。</td></tr><tr><td class="bh21p8-src">佛解脫諸煩惱及習，根本拔故，解脫真不可壞，一切智慧成就故，名為無礙解脫。成就八解脫，甚深遍得故，名為具足解脫。……破魔軍故得解脫，離煩惱故得解脫，離遮諸禪法故得解脫，於諸禪定入出自在無礙故。</td><td>佛陀解脫一切煩惱以及煩惱的習氣，是從根本上徹底拔除的，所以這種解脫真實而不可毀壞，又因為一切智慧都已成就，所以稱為「無礙解脫」。成就了八種解脫，而且深入透徹、無不圓滿，所以稱為「具足解脫」……由於摧破魔軍而得解脫，由於遠離煩惱而得解脫，由於遠離種種障礙禪定的因素而得解脫，對於種種禪定能夠自在出入、毫無障礙。</td><td class="bh21p8-guan"><b>根本解脫·遍得解脫·共解脫三重結構</b>——本段揭示解脫眾的三重層次：從根本拔除煩惱習氣（根本解脫）、深入八解脫無不圓滿（遍得解脫）、破魔離惱於諸禪定出入自在（共解脫）；三者層層遞進，構成完整的解脫體系。</td></tr><tr><td class="bh21p8-src">一者、佛於解脫諸煩惱中，用盡智自證知：知苦已，斷集已，盡證已，修道已，是為盡智解脫知見眾。知苦已不復更知，乃至修道已不復更修，是為無生智解脫知見眾。二者、佛知是人入空門得解脫，是人無相門得解脫，是人無作門得解脫……是人軟語得解脫，是人苦教得解脫，是人雜語得解脫。</td><td>第一種，佛陀在解脫一切煩惱的過程中，以「盡智」親自證知：知苦已經究竟、斷集已經究竟、證滅已經究竟、修道已經究竟，這稱為「盡智解脫知見眾」。知苦之後不需要再重新去知，乃至修道之後不需要再重新去修，這稱為「無生智解脫知見眾」。第二種，佛陀能夠了知：這個人是透過「空門」而得解脫的，那個人是透過「無相門」而得解脫的，另一個人是透過「無作門」而得解脫的……這個人是以柔軟語而得度的，那個人是以嚴厲的教誡而得度的，另一個人則是以種種不同的方式而得度的。</td><td class="bh21p8-guan"><b>自覺與覺他的後設認知</b>——解脫知見眾包含兩層：一是對自身解脫的「後設認知」（不僅解脫，更「知」自己已解脫）；二是對眾生根機的洞察（知何人由何門得度），此即「應病與藥」的無礙方便，隨眾生根機差異而施設不同法門。</td></tr><tr><td class="bh21p8-src">念佛一切智、一切知見，大慈、大悲，十力、四無所畏，四無礙智、十八不共法等；念如佛所知無量不可思議諸功德，是名念佛。</td><td>憶念佛的一切智、一切種智，憶念佛的大慈大悲，憶念佛的十力、四無所畏、四無礙智、十八不共法等等；憶念如同佛陀所了知的、無量不可思議的種種功德——這就稱為「念佛」。</td><td class="bh21p8-guan"><b>總結念佛的完整內涵</b>——這句話正式收束全品，把「念佛」的內容明確界定為對佛陀一切智慧與功德的全面憶念，而非僅止於名號或相好，呼應開篇「云何是念佛」一問的完整回答。</td></tr><tr><td class="bh21p8-src">是念在七地中。或有漏，或無漏。有漏者有報，無漏者無報。三根相應：樂、喜、捨根。行得，亦果報得：行得者，如此間國中學念佛三昧；果報得者，如無量壽佛國人，生便自然能念佛。如是等，如《阿毘曇》中廣分別。</td><td>這種念佛之念，存在於七地之中，有時屬於有漏，有時屬於無漏。屬於有漏的，會有相應的果報；屬於無漏的，則沒有果報。它與樂根、喜根、捨根三種根相應。念佛三昧的獲得，有的是透過修行而獲得，也有的是透過果報而自然獲得：透過修行而獲得的，就如同在我們這個世間國土中學習念佛三昧的人；透過果報而自然獲得的，就如同往生無量壽佛國的人，一出生便自然而然能夠念佛。像這一類的種種內容，如同《阿毘曇》中所廣泛分別解說的一樣。</td><td class="bh21p8-guan"><b>念佛三昧的定位與獲得方式</b>——本段將念佛安置於具體的修證座標（七地、有漏無漏、三根相應），並區分「行得」與「果報得」兩種獲得途徑，說明念佛三昧既是此土精進修行的果，也可以是淨土往生自然具足的果，呼應大乘他力與自力並重的修證觀。</td></tr></tbody></table><p class="bh21p8-note">大智度論卷二十一第8品「念佛五分法身」原文·白話·中觀對照。禪定不可知之認識論難題、見果知因三喻立則、阿頭摩國雷電公案、日出三昧能量守恆、大悲驅動慧眾無限擴展、離二邊中道具體展開、根本遍得共解脫三重結構、解脫知見自覺覺他後設認知、念佛七地有漏無漏行得果報得</p></div></div>
+<script id="wy-bh21p8-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("bh21p8Btn"),BOX=document.getElementById("bh21p8Box"),MODAL=document.getElementById("bh21p8Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=7;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+/*BHPLACE*/function place(){var cands=[document.getElementById("c21p8Box")],eb=document.querySelector(".wy-ebox");if(eb)cands.push(eb);var best=null;for(var i=0;i<cands.length;i++){var el=cands[i];if(!el)continue;var cs=getComputedStyle(el);if(cs.display==="none")continue;var r=el.getBoundingClientRect();if(r.height<=4)continue;var v=Math.round(window.innerHeight-r.top)+8;if(best===null||v>best)best=v;}if(best!==null)BOX.style.bottom=best+"px";}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="bh21p8Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-BH21P8:END-->
 </body>
 </html>
