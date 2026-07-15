@@ -2166,5 +2166,56 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-BH21P4:END-->
+<!--WY-BH21P5:BEGIN-->
+<style id="wy-bh21p5-css">
+.bh21p5-fabbox{position:fixed;right:22px;bottom:150px;z-index:123;display:none;}
+.bh21p5-fabbox.show{display:block;}
+.bh21p5-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#4a5a68,#232d36);padding:8px 15px;border-radius:22px;border:1px solid rgba(150,180,205,.55);box-shadow:0 4px 16px rgba(0,0,0,.32);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.bh21p5-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(120,160,200,.5);}
+.bh21p5-ic{font-size:15px;line-height:1;color:#bcd4ea;}
+.bh21p5-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.bh21p5-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.bh21p5-l2{font-size:13px;font-weight:700;color:#eef4fa;white-space:nowrap;}
+.bh21p5-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(22,26,30,.6);padding:16px;}
+.bh21p5-modal.open{display:flex;}
+.bh21p5-card{position:relative;background:#fbf7ee;max-width:1080px;width:100%;max-height:90vh;overflow:auto;border:1px solid #d3cdbf;border-radius:14px;padding:28px 22px 20px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.bh21p5-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#3f5160;}
+.bh21p5-card .sub{margin:0 0 12px;font-family:"Noto Sans TC",sans-serif;font-size:12.5px;color:#5b6b78;}
+.bh21p5-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#eceef0;color:#3f5160;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.bh21p5-close:hover{background:#dde2e6;}
+.bh21p5-tbl{width:100%;border-collapse:collapse;font-size:12.8px;margin:.2em 0 1em;}
+.bh21p5-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#3f5160;font-size:14px;text-align:left;margin:.4em 0 .5em;}
+.bh21p5-tbl th,.bh21p5-tbl td{border:1px solid #d8d2c4;padding:.5em .65em;text-align:left;vertical-align:top;line-height:1.72;}
+.bh21p5-tbl thead th{background:#3f5160;color:#eef4fa;font-weight:700;position:sticky;top:0;}
+.bh21p5-tbl thead th:nth-child(1){width:32%;}.bh21p5-tbl thead th:nth-child(2){width:41%;}.bh21p5-tbl thead th:nth-child(3){width:27%;}
+.bh21p5-src{font-family:"Noto Serif TC",serif;color:#5a4636;background:#f6efe0;letter-spacing:.3px;}
+.bh21p5-qa{font-family:"Noto Serif TC",serif;color:#3d4f2f;background:#eef2e2;letter-spacing:.3px;}
+.bh21p5-guan{background:#eef2f5;color:#37505f;}
+.bh21p5-tbl tbody tr:nth-child(even) td{background:#faf6ee;}
+.bh21p5-tbl tbody tr:nth-child(even) td.bh21p5-guan{background:#e8eef2;}
+.bh21p5-tbl tbody tr:nth-child(even) td.bh21p5-qa{background:#e7ecdb;}
+.bh21p5-tbl b{color:#8b2500;}
+.bh21p5-guan b{color:#2f6b5a;}
+.bh21p5-note{font-size:12px;color:#4a5560;line-height:1.95;background:#eef2f5;border-left:3px solid #7f9cb5;border-radius:0 6px 6px 0;padding:11px 14px;margin:2px 0 0;}
+.bh21p5-note b{color:#8b2500;}
+@media(max-width:900px){.bh21p5-fabbox{right:14px;}.bh21p5-tbl{font-size:11px;}.bh21p5-card{padding:22px 12px 14px;}}
+</style>
+<div class="bh21p5-fabbox" id="bh21p5Box"><button class="bh21p5-btn" id="bh21p5Btn" type="button" aria-label="開啟白話翻譯表"><span class="bh21p5-ic">譯</span><span class="bh21p5-ls"><span class="bh21p5-l1">本品 · 原文·白話·中觀</span><span class="bh21p5-l2">白話翻譯表</span></span></button></div><div class="bh21p5-modal" id="bh21p5Modal" role="dialog" aria-modal="true"><div class="bh21p5-card"><button class="bh21p5-close" id="bh21p5Close" type="button" aria-label="關閉">×</button><h3>卷二十一 · 第5品 白話翻譯表（菩薩九相觀法義）</h3><p class="sub">大智度論卷二十一·菩薩九相觀法義 · 原文↔白話↔中觀概念 逐段對照</p><table class="bh21p5-tbl"><caption>菩薩九相觀法義 白話翻譯表 · 原文｜白話翻譯｜中觀概念（共6段）</caption><thead><tr><th>原文</th><th>白話翻譯</th><th>中觀概念</th></tr></thead><tbody><tr><td class="bh21p5-qa">問曰：聲聞人如是觀，心厭離，欲疾入涅槃；菩薩憐愍一切眾生、集一切佛法、度一切眾生、不求疾入涅槃故，觀是九相，云何不墮二乘證？</td><td>提問說：聲聞人這樣觀修九相之後，內心生起厭離，便急切地想趣入涅槃；但菩薩心懷憐愍一切眾生、要集聚一切佛法、要度化一切眾生，並不追求急速入於涅槃——既然如此，菩薩同樣觀修這九相，又怎麼能不墮入聲聞、緣覺二乘的證果之中呢？</td><td class="bh21p5-guan"><b>藥性與願力的衝突·全品核心詰問</b>——此問精準抓出九相觀的「副作用」：同一帖對治貪欲的猛藥，聲聞服下便循「厭離→疾入涅槃」的路徑半途而廢，菩薩若服下同一帖藥，理當面臨相同的藥性拉力。這一問逼問的，正是菩薩如何在使用同一套技術的前提下，仍能維持與聲聞截然不同的修證終點。</td></tr><tr><td class="bh21p5-qa">答曰：菩薩於眾生心生憐愍，知眾生以三毒因緣故，受今世、後世身、心苦痛。是三毒終不自滅，亦不可以餘理得滅；但觀所著內外身相，然後可除。以是故，菩薩欲滅是婬欲毒故，觀是九相。如人憐愍病者，合和諸藥以療之；菩薩亦如是，為著色眾生，說是青瘀相等，隨其所著，分別諸相，如先說。是為菩薩行九相觀。</td><td>回答說：菩薩對眾生生起憐愍之心，深知眾生正是由於貪、瞋、癡三毒的因緣，才在今生與來世承受身心的種種苦痛。這三毒終究不會自行消滅，也無法用其他的道理將它化解，唯有透過觀察自己所貪著的內外身相，才能將它去除。正因如此，菩薩為了滅除貪欲這一劇毒，才觀修這九相——就好比有人憐憫病人，便調配各種藥物來替他治療；菩薩也是同樣的道理，為了那些貪著色相的眾生，宣說青瘀相等種種不淨相，隨順眾生各自所貪著的對象，分別演說相應的觀法，如同前面所說的一樣。這就是菩薩觀修九相的用意所在。</td><td class="bh21p5-guan"><b>醫者試藥·動機層的第一重防護</b>——此答揭示菩薩與聲聞修同一觀法時最根本的動機差異：聲聞是「病人自救」，一心求脫離病苦；菩薩則是「醫者試藥」，親自體驗藥性以便將來配藥救治眾生。同一帖藥，因服藥者的發心不同，其效果的終點也隨之分流——這正是大乘「以何等心行何等法」決定果報方向的具體示範，而非法門本身有高下之別。</td></tr><tr><td class="bh21p5-src">菩薩以大慈悲心，行是九相，作如是念：「我未具足一切佛法，不入涅槃，是為一法門，我不應住此一門，我當學一切法門。」以是故，菩薩行九相無所妨。</td><td>菩薩以廣大的慈悲心觀修這九相時，會這樣思惟：「我尚未具足一切佛法，因此不能就此入於涅槃；這九相只是眾多法門中的一門，我不應該滯留、安住在這一門之中，我應當學盡一切法門。」正因為有這樣的思惟，菩薩觀修九相便不會受到妨礙，也不會因此偏離大乘的方向。</td><td class="bh21p5-guan"><b>不住一門·格局層的第二重防護</b>——菩薩的第二重保險來自「大願」的格局：即使九相觀的厭離效力再強，菩薩心中始終記得這只是八萬四千法門中的「一門」，尚有無量法門待學、無量眾生待度，因此不會把某一階段性的修證體驗誤認作終點，這正是菩薩道「不住一法、遍學一切」精神的具體展現。</td></tr><tr><td class="bh21p5-src">菩薩行是九相，或時厭患心起，如是不淨身可惡可患，欲疾取涅槃。爾時，菩薩作是念：「十方諸佛說：一切法相空，空中無無常，何況有不淨！但為破淨顛倒故習此不淨，是不淨皆從因緣和合生，無有自性，皆歸空相；我今不應取是因緣和合生無自性不淨法，欲疾入涅槃。」</td><td>菩薩觀修這九相時，有時仍不免生起厭患之心，覺得這不淨的色身實在可厭可患，因而想要急切地趣入涅槃。這時，菩薩便會這樣思惟：「十方諸佛都曾宣說：一切法相本自空寂，既然是空，其中連『無常』都無從安立，又何況會有『不淨』這回事呢！我之所以修習這不淨觀，只是為了破除眾生對清淨的顛倒妄執罷了——這個所謂的『不淨』，終究是由因緣和合而生的，本無固定不變的自性，最終都要歸於空相。既然如此，我現在不應該執取這個因緣和合、本無自性的『不淨』法，就此急切地想要趣入涅槃。」</td><td class="bh21p5-guan"><b>空性煞車·核心層的第三重防護</b>——這是三重防護中最關鍵、也最深刻的一層：當前兩重防護（動機、大願）在極限情境下仍可能鬆動時，菩薩以中觀正見作最終的「緊急煞車」——直接洞見「不淨」與「淨」一樣，皆是因緣和合、無有自性的假名施設，並非有一個真實存在的「不淨」在那裡逼迫人逃離。一旦看穿不淨相本身即是空，厭離便失去了可以依附的實有對境，貪生涅槃之心自然無由生起，這正是「以空對治有」而非「以一種執著取代另一種執著」的究竟解脫智慧。</td></tr><tr><td class="bh21p5-src">經中亦有是說：「若色中無味相，眾生不應著色；以色中有味故，眾生起著。若色無過罪，眾生亦無厭色者；以色實有過惡，故觀色則厭。若色中無出相，眾生亦不能於色得脫；以色有出相故，眾生於色得解脫。」味是淨相因緣故，以是故，菩薩不於不淨中沒、早取涅槃。</td><td>經中也曾這樣說：「假使色法之中沒有任何令人愛著的『味』相，眾生便不應該會貪著色法；正因為色法之中確實有令人愛著的滋味，眾生才會對它生起貪著。假使色法沒有任何過失罪患，眾生也不會有厭離色法的道理；正因為色法確實存在過失罪惡，所以一旦觀察色法，便自然生起厭離。假使色法之中沒有『出離』的可能，眾生便永遠無法從色法之中解脫出來；正因為色法之中確實存在出離之相，眾生才能夠從色法當中得到解脫。」這「味」正是清淨顛倒得以生起的因緣所在。正因如此，菩薩才不會沉沒在不淨觀之中、也不會過早地趣入涅槃。</td><td class="bh21p5-guan"><b>味、過、出三角辯證·收束全品的方法論</b>——此段引經作結，以「味、過、出」三個環環相扣的角度，完整說明色法（乃至一切法）的三重面相：眾生因「味」而貪著，聖者因「過」而厭離，行者因「出」而解脫——三者其實是同一法在不同觀察角度下的呈現，並非三種互斥的實體。菩薩之所以「不於不淨中沒」，正因為看透了淨與不淨、味與過，皆是緣起的相對安立，故能出入自在，既不被「淨」的貪著綁住，也不被「不淨」的厭離推走，真正安住在不落兩邊的中道之中。</td></tr><tr><td class="bh21p5-src">九相義，分別竟。</td><td>關於九相的義理，到這裡已經全部分辨解說完畢。</td><td class="bh21p5-guan"><b>全品收束語</b>——此句是《大智度論》論主慣用的段落結語，標誌著「九相義」這一整段論辯（自八背捨義以下，歷經九相、勝處等一切處、再到菩薩九相觀法義）至此告一段落，下一品便將轉入新的主題「八念義」，呼應全卷次第展開的論述結構。</td></tr></tbody></table><p class="bh21p5-note">大智度論卷二十一第5品「菩薩九相觀法義」原文·白話·中觀對照。聲聞菩薩同修九相何以不墮二乘之辯、醫者試藥動機層、不住一門格局層、空性煞車核心層三重防護、味過出三角辯證、菩薩不於不淨中沒</p></div></div>
+<script id="wy-bh21p5-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("bh21p5Btn"),BOX=document.getElementById("bh21p5Box"),MODAL=document.getElementById("bh21p5Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=4;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+/*BHPLACE*/function place(){var cands=[document.getElementById("c21p5Box")],eb=document.querySelector(".wy-ebox");if(eb)cands.push(eb);var best=null;for(var i=0;i<cands.length;i++){var el=cands[i];if(!el)continue;var cs=getComputedStyle(el);if(cs.display==="none")continue;var r=el.getBoundingClientRect();if(r.height<=4)continue;var v=Math.round(window.innerHeight-r.top)+8;if(best===null||v>best)best=v;}if(best!==null)BOX.style.bottom=best+"px";}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="bh21p5Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-BH21P5:END-->
 </body>
 </html>
